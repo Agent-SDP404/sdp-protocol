@@ -8,7 +8,7 @@ python tools/validate.py
 
 No third-party packages are required. The script checks:
 
-- The draft mandate envelope using the specific schema keywords present in this repository. Unsupported keywords fail explicitly; this is not a general JSON Schema implementation.
+- The SDP 1.0 mandate envelope using the specific schema keywords present in this repository. Unsupported keywords fail explicitly; this is not a general JSON Schema implementation.
 - Example exchange references, output classes, audiences and result recipients.
 - Local Markdown file links. External availability and heading anchors are not checked.
 - Rejection of wrong agents, instances, purposes, operations, audiences, context, output classes, validity windows, charges, units, revoked mandates and unreconciled outcomes.

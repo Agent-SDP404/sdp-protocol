@@ -2,7 +2,7 @@
   "notice": "Synthetic local-agent examples. Proof references are placeholders, not credentials.",
   "mandates": [
     {
-      "version": "sdp/0.2-draft",
+      "version": "sdp/1.0",
       "id": "mandate:knowledge",
       "instance": "example:local-lab",
       "principal": "person:alice",
@@ -42,7 +42,7 @@
       }
     },
     {
-      "version": "sdp/0.2-draft",
+      "version": "sdp/1.0",
       "id": "mandate:matching",
       "instance": "example:local-lab",
       "principal": "person:carol",
@@ -85,7 +85,7 @@
       }
     },
     {
-      "version": "sdp/0.2-draft",
+      "version": "sdp/1.0",
       "id": "mandate:coordinator",
       "instance": "example:local-lab",
       "principal": "person:dana",
@@ -132,7 +132,7 @@
       }
     },
     {
-      "version": "sdp/0.2-draft",
+      "version": "sdp/1.0",
       "id": "mandate:worker",
       "instance": "example:local-lab",
       "principal": "person:dana",

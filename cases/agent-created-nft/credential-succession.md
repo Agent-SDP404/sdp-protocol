@@ -1,6 +1,6 @@
 # NFT-CASE-03: Credential-based succession
 
-Application profile draft. This document describes a specific succession design, not a generic SDP requirement or a verification of current service behavior. Normative terms apply only to this case.
+Application profile included in SDP 1.0.0. This document describes a specific succession design, not a generic SDP requirement or a verification of current service behavior. Normative terms apply only to this case.
 
 ## Four separate checkpoints
 

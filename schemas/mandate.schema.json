@@ -1,6 +1,6 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:sdp:draft:0.2:mandate",
+  "$id": "urn:sdp:1.0:mandate",
   "title": "SDP illustrative mandate envelope",
   "description": "Structural example only. Proof references are not verified by this schema.",
   "type": "object",
@@ -28,7 +28,7 @@
     "version": {
       "type": "string",
       "enum": [
-        "sdp/0.2-draft"
+        "sdp/1.0"
       ]
     },
     "id": {

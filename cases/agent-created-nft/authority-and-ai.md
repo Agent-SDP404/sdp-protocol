@@ -2,7 +2,7 @@
 
 # NFT-CASE-02: Authority, AI execution and mint entitlements
 
-Status: draft `0.1.0-draft.1`. Normative vocabulary follows [NFT-CASE-01](lifecycle.md).
+Status: application case in SDP `1.0.0`. Normative vocabulary follows [NFT-CASE-01](lifecycle.md).
 
 ## 1. The AI application boundary
 
@@ -66,7 +66,7 @@ The agent MUST NOT invent biographical facts when context is sparse. It MAY crea
 
 Creation is autonomous within an authorized task. This removes mandatory creative-brief questionnaires, draft selection and subjective redraw loops from the one-output profile. It does not remove wallet controls, spending limits or the participant's ability to stop future execution.
 
-Stopping execution is distinct from cancelling an already funded entitlement. Applications MUST disclose whether any refund or cancellation exists. This draft does not invent one.
+Stopping execution is distinct from cancelling an already funded entitlement. Applications MUST disclose whether any refund or cancellation exists. This profile does not invent one.
 
 ## 5. What the mint entitlement means
 

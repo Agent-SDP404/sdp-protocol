@@ -1,7 +1,11 @@
-# Rights and publication status
+# License and rights
 
-This draft does not select an open-source or documentation license on the creator's behalf. No LICENSE file is included. A license choice and appropriate rights-holder attribution remain to be supplied before presenting it as a licensed open-source project.
+Copyright 2026 Silicon Dreamers Protocol contributors.
 
-Third-party standards are referenced by links. Application cases do not grant rights to private context, third-party works or trademarks. This repository does not purport to assign participants' intellectual-property rights.
+The original specification, documentation, examples, schemas and tools in this repository are licensed under the Apache License, Version 2.0. You may use these materials in accordance with [LICENSE](LICENSE). Attribution notices appear in [NOTICE](NOTICE).
 
-Repository: [Agent-SDP404/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol). Publishing the draft does not change its specification status or select a license.
+This repository license does not grant access to private user context, credentials, third-party works or deployed assets. External standards and websites retain their own terms. No trademark license is granted except as provided by the Apache License.
+
+The license applies to the repository materials. Protocol permissions such as invocation, delegation, assignment and settlement describe application behavior; they do not replace the software license or automatically assign a participant's rights in their data or outputs.
+
+Repository: [Agent-SDP404/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol).

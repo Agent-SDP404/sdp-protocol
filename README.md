@@ -2,7 +2,7 @@
 
 **A protocol for personal information value exchange through user-authorized AI agents.**
 
-Draft `0.2.0-draft.1` · [Protocol specification](spec/SDP-0001-core.md)
+Version **1.0.0** · **Apache-2.0** · [Protocol specification](spec/SDP-0001-core.md)
 
 A person's experience, preferences, knowledge, intentions and judgment carry value. A personal agent can interpret that context and turn it into something another person or system can use: an answer, a creative work, a service, a request, a decision or an authorized action.
 
@@ -70,7 +70,7 @@ The earlier NFT, mint-entitlement and seat-succession design is preserved in [th
 | [Architecture](docs/architecture.md) | Components, trust boundaries and interaction sequences |
 | [Security](docs/security.md) | Disclosure, prompt injection, replay, revocation and operator risks |
 | [Application profiles](cases/README.md) | How examples map to the core |
-| [Mandate schema](schemas/mandate.schema.json) | A deliberately narrow draft authorization envelope |
+| [Mandate schema](schemas/mandate.schema.json) | An illustrative authorization envelope for SDP 1.0 |
 | [Example exchanges](examples/exchanges.json) | Synthetic, non-executable scenarios |
 | [Validation](docs/validation.md) | Local structural and consistency checks |
 | [Authorship](AUTHORS.md) | Origin and attribution |
@@ -78,7 +78,9 @@ The earlier NFT, mint-entitlement and seat-succession design is preserved in [th
 
 ## Status and validation
 
-This is a complete first repository draft of a proposed protocol, not a deployed network, audited implementation or established interoperability standard. The wire profile is provisional. Its version is independent of any application's deployment version.
+SDP 1.0.0 is the first formal open-source specification release. It defines protocol semantics, authority boundaries and application cases, with illustrative schemas and local validation tools. A conforming deployment must supply its concrete wire profile and enforcement evidence; this release does not include a production runtime or audited contracts. Specification versions are independent of application deployment versions.
+
+See the [1.0.0 release notes](releases/v1.0.0.md) and [versioning policy](docs/versioning.md).
 
 ```sh
 python tools/validate.py
@@ -87,3 +89,7 @@ python tools/validate.py
 The standard-library validator checks local links, mandate structure, example references and authorization-boundary fixtures. It does not execute an exchange, verify a signature or prove an application's privacy or autonomy guarantees.
 
 Protocol concept attribution: **Silicon Dreamers Protocol**. See [contribution guidance](CONTRIBUTING.md) and [rights status](RIGHTS.md). Repository: [Agent-SDP404/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol).
+
+## License
+
+The specification, documentation, examples and validation tools are released under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for attribution and [RIGHTS.md](RIGHTS.md) for scope.

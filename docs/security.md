@@ -29,4 +29,4 @@ A bearer succession credential can be stolen, copied or leaked through logs. The
 
 ## Reporting
 
-Do not place private context, credentials, signing keys or exploitable live-system details in public issues. This draft has no designated private security contact yet. A maintainer must establish a contact before deploying or presenting the repository as an operational service.
+Do not place private context, credentials, signing keys or exploitable live-system details in public issues. This project has no designated private security contact yet. A maintainer must establish a contact before deploying or presenting the repository as an operational service.

@@ -4,7 +4,7 @@
 
 **An SDP application profile for agent-created artifacts, transferable creation-and-mint entitlements, and persistent-seat succession.**
 
-**Status:** specification draft `0.1.0-draft.1` · **Language:** English · [General SDP core](../../README.md)
+**Status:** application case in SDP `1.0.0` · **Language:** English · [General SDP core](../../README.md)
 
 An AI application can turn what an agent understands about a participant into an original artifact. This application profile describes how the participant authorizes that work, how the agent commits its result, how the result becomes a verifiable tokenized work, and how a subsequent participant receives the right to create and mint a new work in the same persistent seat.
 
@@ -39,7 +39,7 @@ flowchart LR
 
 The participant's agent executes the creative workload: it interprets accessible context, chooses a direction, uses an image model or another permitted creation runtime, and submits one original result. The application supplies a machine-readable policy, identity checks, resumable execution, content verification and a ledger adapter.
 
-The same separation can support personalized characters, visual artifacts, or other media when an application defines the relevant output and validation profile. The documented Silicon Dreamers implementation is an image-based application; other media are possible implementations of this draft, not announced product features.
+The same separation can support personalized characters, visual artifacts, or other media when an application defines the relevant output and validation profile. The documented Silicon Dreamers implementation is an image-based application; other media are possible implementations of this profile, not announced product features.
 
 ### Developer non-sovereignty
 

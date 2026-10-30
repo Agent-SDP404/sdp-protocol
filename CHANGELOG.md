@@ -1,5 +1,14 @@
 # Changelog
 
+## 1.0.0 — 2026-10-30
+
+- Published the first formal open-source SDP specification release under Apache-2.0.
+- Released the general core, AI authority model and exchange/rights semantics.
+- Included knowledge-service, intent-matching, agent collaboration, NFT succession and agent-created token cases.
+- Versioned the illustrative mandate envelope as `sdp/1.0` and retained the same authority semantics.
+- Added LICENSE, NOTICE, VERSION, release notes and a compatibility policy.
+- Bundled local structural and authorization-boundary validation.
+
 ## 0.2.0-draft.1 — 2026-10-30
 
 - Added an agent-created token case covering context-derived token design, authorized creation, distribution, control assignments and transfer of creation entitlements.

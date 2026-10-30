@@ -1,6 +1,6 @@
 # SDP-0003: Exchange, rights and value allocation
 
-Status: draft `0.2.0-draft.1`. Normative terms follow [the core](SDP-0001-core.md).
+Status: specification release `1.0.0`. Normative terms follow [the core](SDP-0001-core.md).
 
 ## 1. What can be exchanged
 

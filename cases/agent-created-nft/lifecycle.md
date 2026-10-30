@@ -4,8 +4,8 @@
 
 | Field | Value |
 |---|---|
-| Status | Draft |
-| Specification | `0.1.0-draft.1` |
+| Status | Application case |
+| Specification release | `1.0.0` |
 | Owner of this specification | Silicon Dreamers Protocol |
 | Date | 2026-10-30 |
 | Scope | Chain-independent AI creation and seat succession |

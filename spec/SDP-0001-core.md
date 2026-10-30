@@ -1,6 +1,6 @@
 # SDP-0001: Personal-agent information value exchange
 
-Status: draft `0.2.0-draft.1` · Date: 2026-10-30 · Attribution: Silicon Dreamers Protocol
+Status: specification release `1.0.0` · Date: 2026-10-30 · Attribution: Silicon Dreamers Protocol
 
 ## 1. Abstract
 
@@ -14,7 +14,7 @@ The protocol does not require NFTs, seats, minting, blockchains, a specific mode
 
 Uppercase MUST, MUST NOT, SHOULD and MAY have the meanings described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) and [RFC 8174](https://www.rfc-editor.org/rfc/rfc8174).
 
-This is a proposed specification. Conformance requires this core, [SDP-0002](SDP-0002-authority-and-ai.md), [SDP-0003](SDP-0003-exchange-and-rights.md) and a concrete application/wire profile. Example validity alone does not demonstrate conformance of a deployment.
+This is the SDP 1.0.0 specification release. Conformance requires this core, [SDP-0002](SDP-0002-authority-and-ai.md), [SDP-0003](SDP-0003-exchange-and-rights.md) and a concrete application/wire profile. Example validity alone does not demonstrate conformance of a deployment.
 
 ## 3. Actors and boundaries
 
@@ -46,7 +46,7 @@ A mandate binds principal, agent, instance, audience, purpose, context scope, op
 
 The mandatory semantic distinction is between **derive**, **disclose**, **invoke**, **delegate**, **assign**, **settle** and **remember**. A profile may use other wire names but MUST preserve their separation. Reading private context can support derivation without permitting disclosure of the source.
 
-The [draft mandate schema](../schemas/mandate.schema.json) is a narrow example envelope. Its context aliases, limits and proof references are illustrative; it is not a universal signing format.
+The [mandate schema](../schemas/mandate.schema.json) is a narrow example envelope. Its context aliases, limits and proof references are illustrative; it is not a universal signing format.
 
 ### 4.4 Representation
 
