@@ -1,0 +1,736 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:agent-sdp404:2.0:local-wire",
+  "title": "AGENT-SDP404 local reference profile envelopes",
+  "$defs": {
+    "source": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "source"
+        },
+        "sourceId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "kind": {
+          "enum": [
+            "personal",
+            "organizational",
+            "public",
+            "research",
+            "device",
+            "environmental",
+            "agent-generated",
+            "composite"
+          ]
+        },
+        "controller": {
+          "type": "string",
+          "minLength": 1
+        },
+        "access": {
+          "enum": [
+            "public",
+            "restricted"
+          ]
+        },
+        "termsRef": {
+          "type": "string",
+          "minLength": 1
+        },
+        "payloadHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "allowedPrincipals": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "allowedPurposes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "audiences": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "allowedOperations": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "derive",
+              "disclose"
+            ]
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "sourceId",
+        "kind",
+        "controller",
+        "access",
+        "termsRef",
+        "payloadHash",
+        "allowedPrincipals",
+        "allowedPurposes",
+        "audiences",
+        "allowedOperations"
+      ],
+      "additionalProperties": false
+    },
+    "mandate": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "mandate"
+        },
+        "grantId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "principal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipient": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sourceIds": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "capability": {
+          "enum": [
+            "data-summary",
+            "nft-create",
+            "token-create"
+          ]
+        },
+        "operations": {
+          "type": "array",
+          "items": {
+            "enum": [
+              "derive",
+              "disclose",
+              "invoke"
+            ]
+          },
+          "uniqueItems": true
+        },
+        "notBefore": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "expiresAt": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "maxUses": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 100
+        },
+        "maxChargeMinor": {
+          "const": 0
+        },
+        "assignableAgents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "grantId",
+        "principal",
+        "agent",
+        "recipient",
+        "purpose",
+        "sourceIds",
+        "capability",
+        "operations",
+        "notBefore",
+        "expiresAt",
+        "maxUses",
+        "maxChargeMinor",
+        "assignableAgents"
+      ],
+      "additionalProperties": false
+    },
+    "agreement": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "agreement"
+        },
+        "exchangeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grantId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grantHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "principal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipient": {
+          "type": "string",
+          "minLength": 1
+        },
+        "purpose": {
+          "type": "string",
+          "minLength": 1
+        },
+        "capability": {
+          "type": "string",
+          "minLength": 1
+        },
+        "sources": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "object",
+            "properties": {
+              "sourceId": {
+                "type": "string",
+                "minLength": 1
+              },
+              "descriptorHash": {
+                "type": "string",
+                "pattern": "^[0-9a-f]{64}$"
+              }
+            },
+            "required": [
+              "sourceId",
+              "descriptorHash"
+            ],
+            "additionalProperties": false
+          }
+        },
+        "plan": {
+          "oneOf": [
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "data-summary"
+                },
+                "unit": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "kind",
+                "unit"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "token-create"
+                },
+                "name": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "symbol": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "supply": {
+                  "type": "integer",
+                  "minimum": 1,
+                  "maximum": 9007199254740991
+                },
+                "allocations": {
+                  "type": "object",
+                  "minProperties": 1,
+                  "additionalProperties": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 9007199254740991
+                  }
+                },
+                "admin": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "kind",
+                "name",
+                "symbol",
+                "supply",
+                "allocations",
+                "admin"
+              ],
+              "additionalProperties": false
+            },
+            {
+              "type": "object",
+              "properties": {
+                "kind": {
+                  "const": "nft-create"
+                },
+                "seatId": {
+                  "type": "string",
+                  "minLength": 1
+                },
+                "predecessor": {
+                  "type": [
+                    "string",
+                    "null"
+                  ]
+                },
+                "beneficiary": {
+                  "type": "string",
+                  "minLength": 1
+                }
+              },
+              "required": [
+                "kind",
+                "seatId",
+                "predecessor",
+                "beneficiary"
+              ],
+              "additionalProperties": false
+            }
+          ]
+        },
+        "nonce": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expiresAt": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        },
+        "assignmentHash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "exchangeId",
+        "grantId",
+        "grantHash",
+        "principal",
+        "agent",
+        "recipient",
+        "purpose",
+        "capability",
+        "sources",
+        "plan",
+        "nonce",
+        "expiresAt",
+        "assignmentHash"
+      ],
+      "additionalProperties": false
+    },
+    "assignment": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "assignment"
+        },
+        "grantId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grantHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "fromAgent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "toAgent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "epoch": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "nonce": {
+          "type": "string",
+          "minLength": 1
+        },
+        "expiresAt": {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 9007199254740991
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "grantId",
+        "grantHash",
+        "fromAgent",
+        "toAgent",
+        "epoch",
+        "nonce",
+        "expiresAt"
+      ],
+      "additionalProperties": false
+    },
+    "revocation": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "revocation"
+        },
+        "grantId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "grantHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "nonce": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "grantId",
+        "grantHash",
+        "nonce"
+      ],
+      "additionalProperties": false
+    },
+    "result": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "result"
+        },
+        "exchangeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agreementHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "outputHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "output": {
+          "type": "object"
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "exchangeId",
+        "agreementHash",
+        "outputHash",
+        "output"
+      ],
+      "additionalProperties": false
+    },
+    "receipt": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "receipt"
+        },
+        "exchangeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "agreementHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "grantHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "agent": {
+          "type": "string",
+          "minLength": 1
+        },
+        "principal": {
+          "type": "string",
+          "minLength": 1
+        },
+        "recipient": {
+          "type": "string",
+          "minLength": 1
+        },
+        "outputHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "resultHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "status": {
+          "const": "DELIVERED"
+        },
+        "allocation": {
+          "type": "object",
+          "properties": {
+            "beneficiary": {
+              "type": "string",
+              "minLength": 1
+            },
+            "chargeMinor": {
+              "const": 0
+            },
+            "unit": {
+              "const": "NONE"
+            }
+          },
+          "required": [
+            "beneficiary",
+            "chargeMinor",
+            "unit"
+          ],
+          "additionalProperties": false
+        },
+        "sequence": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "previousReceiptHash": {
+          "type": [
+            "string",
+            "null"
+          ],
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "exchangeId",
+        "agreementHash",
+        "grantHash",
+        "agent",
+        "principal",
+        "recipient",
+        "outputHash",
+        "resultHash",
+        "status",
+        "allocation",
+        "sequence",
+        "previousReceiptHash"
+      ],
+      "additionalProperties": false
+    },
+    "acknowledgement": {
+      "type": "object",
+      "properties": {
+        "version": {
+          "const": "agent-sdp404/2.0"
+        },
+        "domain": {
+          "type": "string",
+          "minLength": 1
+        },
+        "type": {
+          "const": "acknowledgement"
+        },
+        "exchangeId": {
+          "type": "string",
+          "minLength": 1
+        },
+        "receiptHash": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        },
+        "recipient": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "required": [
+        "version",
+        "domain",
+        "type",
+        "exchangeId",
+        "receiptHash",
+        "recipient"
+      ],
+      "additionalProperties": false
+    }
+  },
+  "type": "object",
+  "properties": {
+    "body": {
+      "oneOf": [
+        {
+          "$ref": "#/$defs/source"
+        },
+        {
+          "$ref": "#/$defs/mandate"
+        },
+        {
+          "$ref": "#/$defs/agreement"
+        },
+        {
+          "$ref": "#/$defs/assignment"
+        },
+        {
+          "$ref": "#/$defs/revocation"
+        },
+        {
+          "$ref": "#/$defs/result"
+        },
+        {
+          "$ref": "#/$defs/receipt"
+        },
+        {
+          "$ref": "#/$defs/acknowledgement"
+        }
+      ]
+    },
+    "signatures": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "properties": {
+          "signer": {
+            "type": "string",
+            "minLength": 1
+          },
+          "signature": {
+            "type": "string",
+            "minLength": 1
+          }
+        },
+        "required": [
+          "signer",
+          "signature"
+        ],
+        "additionalProperties": false
+      }
+    }
+  },
+  "required": [
+    "body",
+    "signatures"
+  ],
+  "additionalProperties": false
+}

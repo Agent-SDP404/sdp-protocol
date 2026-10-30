@@ -140,8 +140,8 @@ def rejects(fn, expected):
 
 
 def main():
-    schema = json.loads((ROOT / "schemas/mandate.schema.json").read_text(encoding="utf-8"))
-    items = json.loads((ROOT / "examples/mandates.json").read_text(encoding="utf-8"))["mandates"]
+    schema = json.loads((ROOT / "schemas/legacy-v1/mandate.schema.json").read_text(encoding="utf-8"))
+    items = json.loads((ROOT / "examples/legacy-v1/mandates.json").read_text(encoding="utf-8"))["mandates"]
     mandates = {item["id"]: item for item in items}
     require(len(mandates) == len(items), "duplicate mandate id")
     for item in items:
@@ -150,7 +150,7 @@ def main():
         parent = item["delegation"]["parentMandateId"]
         if parent:
             delegation(item, mandates[parent])
-    exchanges = json.loads((ROOT / "examples/exchanges.json").read_text(encoding="utf-8"))["exchanges"]
+    exchanges = json.loads((ROOT / "examples/legacy-v1/exchanges.json").read_text(encoding="utf-8"))["exchanges"]
     require(len({x["id"] for x in exchanges}) == len(exchanges), "duplicate exchange id")
     for exchange in exchanges:
         grant = mandates[exchange["mandateId"]]
@@ -162,6 +162,8 @@ def main():
 
     link_count = 0
     for file in ROOT.rglob("*.md"):
+        if any(part in {".git", ".venv", "dist", "__pycache__"} for part in file.relative_to(ROOT).parts):
+            continue
         for target in re.findall(r"\[[^\]\n]*\]\(([^)\n]+)\)", file.read_text(encoding="utf-8")):
             target = target.strip("<>")
             parsed = urlsplit(target)
@@ -212,7 +214,7 @@ def main():
     malformed["limits"]["maxUses"] = True
     rejects(lambda: structural(malformed, schema), "wrong type")
     require((ROOT / "cases/agent-created-nft/lifecycle.md").is_file(), "missing preserved case")
-    print(f"PASS: {len(items)} mandate structures; {len(exchanges)} scenario mappings; "
+    print(f"PASS: {len(items)} legacy-v1 mandate structures; {len(exchanges)} scenario mappings; "
           f"{link_count} local links; 20 negative boundary checks; parent quota consumption.")
     print("Scope: structural examples and illustrative guards only; no signature, network, "
           "blockchain or production verification.")

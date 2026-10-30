@@ -1,16 +1,25 @@
-> This is one application of SDP: personal context becomes an agent-created artifact, and scoped creation/mint authority can pass to another participant. This profile does not define the general protocol.
+> This is one application of AGENT-SDP404: personal context becomes an agent-created artifact, and scoped creation/mint authority can pass to another participant. This profile does not define the general protocol.
 
 # Application case: agent-created NFTs and seat succession
 
-**An SDP application profile for agent-created artifacts, transferable creation-and-mint entitlements, and persistent-seat succession.**
+**An AGENT-SDP404 application profile for agent-created artifacts, transferable creation-and-mint entitlements, and persistent-seat succession.**
 
-**Status:** application case in SDP `1.0.0` · **Language:** English · [General SDP core](../../README.md)
+**Status:** application case in AGENT-SDP404 `2.0.0` · **Language:** English · [General AGENT-SDP404 core](../../README.md)
 
 An AI application can turn what an agent understands about a participant into an original artifact. This application profile describes how the participant authorizes that work, how the agent commits its result, how the result becomes a verifiable tokenized work, and how a subsequent participant receives the right to create and mint a new work in the same persistent seat.
 
 **The seat continues. Each participant's agent creates a new work. Previous works retain their committed content.**
 
 The founding design adds a separation of authority: developers provide rules and infrastructure; participants authorize participation; agents make creative decisions within that delegation; verification services check evidence; a ledger records the permitted result. Operating the application does not, by itself, confer a right to create or mint on a participant's behalf.
+
+## Run the case
+
+Run `python -m agent_sdp404.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:nft-genesis` and `exchange:nft-successor` in [the signed proof bundle](../../examples/traces/local-exchange.json).
+
+The local fixture creates a first artifact, then a successor using different input data and a different principal. The predecessor owner must also sign the successor agreement. The old record remains owned by its original owner and becomes retired; the successor has a new identity in the same seat.
+
+This simulation verifies succession authorization and local state changes. It does not implement the full paid bearer-credential lifecycle below, generate real artwork through a model or mint a blockchain NFT. See [the enforcement matrix](../../docs/conformance.md) for that boundary.
+
 
 ## The application's three objects
 
@@ -84,7 +93,7 @@ seat:S
 
 ## Mapping to the general protocol
 
-| General SDP object | This application |
+| General AGENT-SDP404 object | This application |
 |---|---|
 | Principal | Participant controlling a wallet |
 | Context | Privately accessible history, preferences and memories |
@@ -97,6 +106,6 @@ seat:S
 
 ## Status and boundaries
 
-This application inspired the first draft. Its public workflow is described at [Silicon Dreamers](https://silicondreamers.com/). The website is a mutable application source, not the generic SDP standard. This profile is a design abstraction and not an audit or confirmation of current deployment behavior. No live address, price or supply cap is pinned here.
+This application inspired the first draft. Its public workflow is described at [Silicon Dreamers](https://silicondreamers.com/). The website is a mutable application source, not the generic AGENT-SDP404 standard. This profile is a design abstraction and not an audit or confirmation of current deployment behavior. No live address, price or supply cap is pinned here.
 
 Market-mediated regeneration is a possible separate adapter. Its settlement and rights must be specified before implementation; the current credential route must not be presented as a generic NFT transfer or an already-live marketplace.

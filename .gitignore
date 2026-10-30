@@ -4,3 +4,9 @@ __pycache__/
 .env.*
 !.env.example
 *.zip
+dist/
+.venv/
+*.egg-info/
+*.sqlite*
+.pytest_cache/
+build/

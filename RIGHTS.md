@@ -1,6 +1,6 @@
 # License and rights
 
-Copyright 2026 Silicon Dreamers Protocol contributors.
+Copyright notices are retained in [NOTICE](NOTICE), including the original Silicon Dreamers Protocol attribution and the current AGENT-SDP404 name.
 
 The original specification, documentation, examples, schemas and tools in this repository are licensed under the Apache License, Version 2.0. You may use these materials in accordance with [LICENSE](LICENSE). Attribution notices appear in [NOTICE](NOTICE).
 

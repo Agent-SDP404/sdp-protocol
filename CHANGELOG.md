@@ -1,5 +1,14 @@
 # Changelog
 
+## 2.0.0 — 2026-10-30
+
+- Renamed the independent protocol AGENT-SDP404 and generalized source/principal modeling beyond personal context.
+- Added a signed local wire profile and executable reference alpha.
+- Added source descriptors, accepted agreements, assignment, revocation, persisted receipts and replay protection.
+- Added research, token and NFT proof bundles, runtime tests and offline verification.
+- Reworked the README and architecture, documented MCP/A2A boundaries and published an enforcement matrix and roadmap.
+- Preserved v1.0.0 history and moved v1 illustrative fixtures into explicit legacy directories.
+
 ## 1.0.0 — 2026-10-30
 
 - Published the first formal open-source SDP specification release under Apache-2.0.

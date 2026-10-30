@@ -1,0 +1,878 @@
+{
+  "profile": "agent-sdp404/local-1",
+  "dataNotice": "All source data is synthetic. Asset adapters are local simulations; signatures and SQLite transactions are real.",
+  "clock": 1793361600,
+  "publicKeys": {
+    "org:publisher": "XuHURHwFukAUkh/ajp4bob6Imw8maidqA+9DAxcqJsM=",
+    "org:incoming": "RbDTbeEf8sRfDRCePsfpm05gODPkUFzLX+p82p7m164=",
+    "org:receiver": "Jvo2bgg/Mj9P9TA8PaAa3ind1E++GCeAin8YsBkq03g=",
+    "org:source": "C1oLTzMgsfKmb3l2paXEhBZHYO9vQoB9Il37ZXrMwog=",
+    "agent:maker": "JpNFjZ3xpxIlbKcxvVWfLPzMU2LEvGS/+D1Wcsq5rQM=",
+    "agent:successor": "TkfSzkO4mKAQxiMiMeCNnE7nYUNxTbfzEQS9Nn+oBQ4=",
+    "operator:local": "IjTWSG545x4vrMSLIhnCW5qNA/O6s9pc2EOdLcDPojk="
+  },
+  "exchanges": [
+    {
+      "input": {
+        "grant": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "mandate",
+            "grantId": "grant:research",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:receiver",
+            "purpose": "purpose:research",
+            "sourceIds": [
+              "source:research"
+            ],
+            "capability": "data-summary",
+            "operations": [
+              "derive",
+              "disclose",
+              "invoke"
+            ],
+            "notBefore": 1793361540,
+            "expiresAt": 1793365200,
+            "maxUses": 1,
+            "maxChargeMinor": 0,
+            "assignableAgents": [
+              "agent:successor"
+            ]
+          },
+          "signatures": [
+            {
+              "signer": "org:publisher",
+              "signature": "or5UUM5/rTkwNksIlhoUdsAmDRKus2RWfVHIz5QRp99wBAAVYTtc2FEzklrdCQcBr4ffnuTHSYKPju4MRKRjDw=="
+            }
+          ]
+        },
+        "agreement": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "agreement",
+            "exchangeId": "exchange:research",
+            "grantId": "grant:research",
+            "grantHash": "d54d8c876e56e0126d161918d389304a20f7da9718e55d6ba539d3dc5518bfb9",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:receiver",
+            "purpose": "purpose:research",
+            "capability": "data-summary",
+            "sources": [
+              {
+                "sourceId": "source:research",
+                "descriptorHash": "dadef8f3e6cd251bca4476f7e5a09de85a913bf235b7a0f7edaf86e176049341"
+              }
+            ],
+            "plan": {
+              "kind": "data-summary",
+              "unit": "synthetic-units"
+            },
+            "nonce": "nonce:research",
+            "expiresAt": 1793362200,
+            "assignmentHash": null
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "k/T6mmjFOnGrqOuyiEPnMrGoSJvhmRJZElnp+DXxw1UKD5sQS9wge44V0L03Tx7sqcx3XAPwSKozxl4hpYUrAw=="
+            },
+            {
+              "signer": "org:publisher",
+              "signature": "vAYKjREwvvQY4MVFJ+ASYX4McndOZYCIvfrMftZbhGAHkmbsGyDuXAUmBE8Nud5uW9Hd+4rxeqcgp/M7aMUwCw=="
+            },
+            {
+              "signer": "org:receiver",
+              "signature": "xe1qNSOPnto+T8IlVxTkUXuoh+k2AB+AV2luJvWzAAET4CgTk9aLN62CgL+3qiMwRNDonQQfuPfQQQyq+1mHDQ=="
+            }
+          ]
+        },
+        "sources": [
+          {
+            "body": {
+              "version": "agent-sdp404/2.0",
+              "domain": "local:demo",
+              "type": "source",
+              "sourceId": "source:research",
+              "kind": "research",
+              "controller": "org:source",
+              "access": "restricted",
+              "termsRef": "example:synthetic-use-only",
+              "payloadHash": "1f3ab056d4b064ee471dce55b03d33178c7d67baa5847efcd01f1132276c87f3",
+              "allowedPrincipals": [
+                "org:publisher"
+              ],
+              "allowedPurposes": [
+                "purpose:research"
+              ],
+              "audiences": [
+                "org:receiver"
+              ],
+              "allowedOperations": [
+                "derive",
+                "disclose"
+              ]
+            },
+            "signatures": [
+              {
+                "signer": "org:source",
+                "signature": "FNox7WhYzDvPwwc7hNqu+liYn2UQI8Xdporfnp+Wyjvo5BC5xWMIA7+oZ4ZoDnOPa20SHl1Uxa5YG/LF09DkAg=="
+              }
+            ]
+          }
+        ],
+        "payloads": {
+          "source:research": {
+            "readings": [
+              12,
+              18,
+              24
+            ]
+          }
+        }
+      },
+      "output": {
+        "result": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "result",
+            "exchangeId": "exchange:research",
+            "agreementHash": "33f7910c084d314bcf8e30d968d1a7c0d6949cf50c1b0e1e554d02db96b05ebb",
+            "outputHash": "7313c2f8aa94f9a46260096c90ccb6c94990d2b609641449ce0e9cad2861c923",
+            "output": {
+              "kind": "data-summary",
+              "sampleCount": 3,
+              "sum": 54,
+              "unit": "synthetic-units"
+            }
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "Q1/Gqko6AHKpNbC5u8cXVsQYP8RAcIjSf9BqGIt+CaJOm3iR8pW4AdY1dRNOcZ/A3s3MfdJYo1/hFqCCxTJIAw=="
+            }
+          ]
+        },
+        "receipt": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "receipt",
+            "exchangeId": "exchange:research",
+            "agreementHash": "33f7910c084d314bcf8e30d968d1a7c0d6949cf50c1b0e1e554d02db96b05ebb",
+            "grantHash": "d54d8c876e56e0126d161918d389304a20f7da9718e55d6ba539d3dc5518bfb9",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:receiver",
+            "outputHash": "7313c2f8aa94f9a46260096c90ccb6c94990d2b609641449ce0e9cad2861c923",
+            "resultHash": "dbdb667a44ca29915165889506d8bce0241f64b8db040b48d945197a7a0d0721",
+            "status": "DELIVERED",
+            "allocation": {
+              "beneficiary": "org:receiver",
+              "chargeMinor": 0,
+              "unit": "NONE"
+            },
+            "sequence": 1,
+            "previousReceiptHash": null
+          },
+          "signatures": [
+            {
+              "signer": "operator:local",
+              "signature": "RW5n8vwh1dlE7FeUAuFXSVQ+fNvgVa8mJuabhFNyl+DqsvZotAX6ZUH34F+HWB2eRT7uyfJ/gxtwueylqWOCBw=="
+            }
+          ]
+        }
+      },
+      "acknowledgement": {
+        "body": {
+          "version": "agent-sdp404/2.0",
+          "domain": "local:demo",
+          "type": "acknowledgement",
+          "exchangeId": "exchange:research",
+          "receiptHash": "09e39d2629a867d7784848a5bfa3145d005c204578e8eeb057b9646ecbe2dc5d",
+          "recipient": "org:receiver"
+        },
+        "signatures": [
+          {
+            "signer": "org:receiver",
+            "signature": "mMWJ9Y+4VcNxyX/myMDYJ8HJMLtc96mNbyRoCK1FR5kZpb9G8LFtI9V2jIe4iO0lWBdlgik8L4/PMguQZV2BDA=="
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "grant": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "mandate",
+            "grantId": "grant:token",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:receiver",
+            "purpose": "purpose:token",
+            "sourceIds": [
+              "source:token"
+            ],
+            "capability": "token-create",
+            "operations": [
+              "derive",
+              "disclose",
+              "invoke"
+            ],
+            "notBefore": 1793361540,
+            "expiresAt": 1793365200,
+            "maxUses": 1,
+            "maxChargeMinor": 0,
+            "assignableAgents": [
+              "agent:successor"
+            ]
+          },
+          "signatures": [
+            {
+              "signer": "org:publisher",
+              "signature": "cFUztsv9Ub9K5d0uwO3beXdYCwLmSxmaI/nsPvPr4H460LQgoHS1hwHfIQEJ5+R1/Zy6atG7ZFsoskFuTTHJDA=="
+            }
+          ]
+        },
+        "agreement": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "agreement",
+            "exchangeId": "exchange:token",
+            "grantId": "grant:token",
+            "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+            "principal": "org:publisher",
+            "agent": "agent:successor",
+            "recipient": "org:receiver",
+            "purpose": "purpose:token",
+            "capability": "token-create",
+            "sources": [
+              {
+                "sourceId": "source:token",
+                "descriptorHash": "b5d57ad640e116253ff24d5e452af7d7217c7f4677ac5876635e808f6b7ae050"
+              }
+            ],
+            "plan": {
+              "kind": "token-create",
+              "name": "Synthetic Research Credits",
+              "symbol": "SRC",
+              "supply": 1000,
+              "allocations": {
+                "org:publisher": 200,
+                "org:receiver": 800
+              },
+              "admin": "org:publisher"
+            },
+            "nonce": "nonce:token",
+            "expiresAt": 1793362200,
+            "assignmentHash": "2c1777ea32885f62b1c1cfaefd26360ab87d921fadb306ff7dbad77d3751571a"
+          },
+          "signatures": [
+            {
+              "signer": "agent:successor",
+              "signature": "G9GFaxNV3RCd2IF7E96qjak+512Cg/HZKEs1iWcRHZE5o2UT8WxTfI8ffMEcBAybegxJgGArBcUb3BuuVBcWAg=="
+            },
+            {
+              "signer": "org:publisher",
+              "signature": "KLf35l7hsYRXR5gVFKscx8a+sjbFLazCzrD7P9lzuwO+0qnsQhzHPNuZo70LRAoKEB1VzZf9HOAJjWi3/H4VBw=="
+            },
+            {
+              "signer": "org:receiver",
+              "signature": "ethFfTQkp5CekygblBxSihqBLZ81yFJJlZFWQZ/XPzkzWNfLzk7U3wvTOXNrIXf7A3pwNmDOp7lUMG+/FMIRDA=="
+            }
+          ]
+        },
+        "sources": [
+          {
+            "body": {
+              "version": "agent-sdp404/2.0",
+              "domain": "local:demo",
+              "type": "source",
+              "sourceId": "source:token",
+              "kind": "organizational",
+              "controller": "org:source",
+              "access": "restricted",
+              "termsRef": "example:synthetic-use-only",
+              "payloadHash": "9a3cff74681c0aac04b1d1cf00e7a6b525807669cc01ec71fa7e58c270590dfe",
+              "allowedPrincipals": [
+                "org:publisher"
+              ],
+              "allowedPurposes": [
+                "purpose:token"
+              ],
+              "audiences": [
+                "org:receiver"
+              ],
+              "allowedOperations": [
+                "derive",
+                "disclose"
+              ]
+            },
+            "signatures": [
+              {
+                "signer": "org:source",
+                "signature": "p401cSsQ15Yk8jIlhNF/7EF5AlUtDwR8bXqPBIKjQcnjiJ5jpka0yKUNUPvoV1Oacd5xFTulVzMv2MDfiwU3Dw=="
+              }
+            ]
+          }
+        ],
+        "payloads": {
+          "source:token": {
+            "project": "synthetic research collaboration",
+            "intent": "coordinate participation"
+          }
+        }
+      },
+      "output": {
+        "result": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "result",
+            "exchangeId": "exchange:token",
+            "agreementHash": "fdc74536f135c988c90e9144fa85d4d5134815af81f32bca56b96f2a623a809e",
+            "outputHash": "d250d7f2b95079f0ac1d38265da67958b6834cf10226ac2097ef91ad280cee18",
+            "output": {
+              "kind": "token-create",
+              "assetId": "simulated:token-create:fdc74536f135c988c90e9144",
+              "simulation": true,
+              "plan": {
+                "kind": "token-create",
+                "name": "Synthetic Research Credits",
+                "symbol": "SRC",
+                "supply": 1000,
+                "allocations": {
+                  "org:publisher": 200,
+                  "org:receiver": 800
+                },
+                "admin": "org:publisher"
+              },
+              "derivedFrom": "b535c9b831a58caaf9eebe48c6ee6bcebaa19af128961881131d30e2c6d005c8"
+            }
+          },
+          "signatures": [
+            {
+              "signer": "agent:successor",
+              "signature": "I8YAeBXMjx7dmUfMoomygf290rRK1H1OZQsN7g9hxpUHtQdacpcSzVcPLJWkkGTy9qcWFOykTNoLvz1iVi1bCA=="
+            }
+          ]
+        },
+        "receipt": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "receipt",
+            "exchangeId": "exchange:token",
+            "agreementHash": "fdc74536f135c988c90e9144fa85d4d5134815af81f32bca56b96f2a623a809e",
+            "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+            "principal": "org:publisher",
+            "agent": "agent:successor",
+            "recipient": "org:receiver",
+            "outputHash": "d250d7f2b95079f0ac1d38265da67958b6834cf10226ac2097ef91ad280cee18",
+            "resultHash": "55c69fc811c2b26c82bcf30ee744d96a7ead38832954e537b595f91857f81cf6",
+            "status": "DELIVERED",
+            "allocation": {
+              "beneficiary": "org:receiver",
+              "chargeMinor": 0,
+              "unit": "NONE"
+            },
+            "sequence": 2,
+            "previousReceiptHash": "09e39d2629a867d7784848a5bfa3145d005c204578e8eeb057b9646ecbe2dc5d"
+          },
+          "signatures": [
+            {
+              "signer": "operator:local",
+              "signature": "LpCYz3B2kC2pv2YwOJy1/iQ+WOkITjUzjcScYmduhhBJFquu7nuN7PdAI5pihy56u7RYXUdBFns1eOLeyHpfCQ=="
+            }
+          ]
+        }
+      },
+      "acknowledgement": {
+        "body": {
+          "version": "agent-sdp404/2.0",
+          "domain": "local:demo",
+          "type": "acknowledgement",
+          "exchangeId": "exchange:token",
+          "receiptHash": "357eabec126817f49fb7a9b0c21baad638b14d379df37fa019151cefff2fa669",
+          "recipient": "org:receiver"
+        },
+        "signatures": [
+          {
+            "signer": "org:receiver",
+            "signature": "WUmdh69To9GiGZVeok+S0H9GEx0tZlZtGJbRs034E7k4klFidnBIxRuCQ4ykpz58fUIAbI8CgUgBLRXRO7NXBA=="
+          }
+        ]
+      },
+      "assignment": {
+        "body": {
+          "version": "agent-sdp404/2.0",
+          "domain": "local:demo",
+          "type": "assignment",
+          "grantId": "grant:token",
+          "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+          "fromAgent": "agent:maker",
+          "toAgent": "agent:successor",
+          "epoch": 0,
+          "nonce": "handoff:grant:token",
+          "expiresAt": 1793362200
+        },
+        "signatures": [
+          {
+            "signer": "agent:maker",
+            "signature": "NBI2TO37E9+3rF6PwiEvjbpXL3GU0nWvxipWcKfvmzDSRKq1SA5jEmDH6RYsGUlDYSERNwX5dhvQZ2g80zg2CA=="
+          },
+          {
+            "signer": "agent:successor",
+            "signature": "eGO1gjO1dtFbW6XAsaPgqBk0SJKlgAvFlvzOOOXAiKJr+twIrRCl+rKTSsFjQGx05Y9+SGiOwc7Q1RcZSQJDBA=="
+          },
+          {
+            "signer": "org:publisher",
+            "signature": "0xaTtPtOqrltdP30pcHQUnelcbhTQmTbiL3ONjQVba3hpROvpnRv5slWC55tGBKvhp0FWqlIHinpugobj6HzBw=="
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "grant": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "mandate",
+            "grantId": "grant:nft-genesis",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:publisher",
+            "purpose": "purpose:nft-genesis",
+            "sourceIds": [
+              "source:nft-genesis"
+            ],
+            "capability": "nft-create",
+            "operations": [
+              "derive",
+              "disclose",
+              "invoke"
+            ],
+            "notBefore": 1793361540,
+            "expiresAt": 1793365200,
+            "maxUses": 1,
+            "maxChargeMinor": 0,
+            "assignableAgents": [
+              "agent:successor"
+            ]
+          },
+          "signatures": [
+            {
+              "signer": "org:publisher",
+              "signature": "LQK1vLDKgCEz4j9C/zs5R+B96E9TSFV62AABvZ5Tgyp2jPzXqp5cEtasmh+rAsywUcx/LVGqqGCsTffimPPFDw=="
+            }
+          ]
+        },
+        "agreement": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "agreement",
+            "exchangeId": "exchange:nft-genesis",
+            "grantId": "grant:nft-genesis",
+            "grantHash": "752f3dce2451eb0953af312b638bc88b562ccb831c253f0c3c2c0aee49aba810",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:publisher",
+            "purpose": "purpose:nft-genesis",
+            "capability": "nft-create",
+            "sources": [
+              {
+                "sourceId": "source:nft-genesis",
+                "descriptorHash": "c18e8870b6a4d66dde3792babd55e22d0a091f47c3e2392e71f940e0596c316a"
+              }
+            ],
+            "plan": {
+              "kind": "nft-create",
+              "seatId": "seat:demo",
+              "predecessor": null,
+              "beneficiary": "org:publisher"
+            },
+            "nonce": "nonce:nft-genesis",
+            "expiresAt": 1793362200,
+            "assignmentHash": null
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "AM0KZLA7kY0Z5XEQqw4XEmsXB7wZsJI6v8+62i6RYohSiTvxK/hjnf3zRZJe5VZgGLSgAgFKtJiWjQCrThUuAA=="
+            },
+            {
+              "signer": "org:publisher",
+              "signature": "dZKiOqzpZuxqKykHJ0vqmE6XwZapG9LlJPqGu178Pu2xOG0cfvFm7mlBg+SWg/WLNMlj1ABf2ivSoaHoeEbwAA=="
+            }
+          ]
+        },
+        "sources": [
+          {
+            "body": {
+              "version": "agent-sdp404/2.0",
+              "domain": "local:demo",
+              "type": "source",
+              "sourceId": "source:nft-genesis",
+              "kind": "agent-generated",
+              "controller": "org:source",
+              "access": "restricted",
+              "termsRef": "example:synthetic-use-only",
+              "payloadHash": "53e03e2e9e84b6afda2c410f31ac991456806321afc0261c90ed10cec82b948e",
+              "allowedPrincipals": [
+                "org:publisher"
+              ],
+              "allowedPurposes": [
+                "purpose:nft-genesis"
+              ],
+              "audiences": [
+                "org:publisher"
+              ],
+              "allowedOperations": [
+                "derive",
+                "disclose"
+              ]
+            },
+            "signatures": [
+              {
+                "signer": "org:source",
+                "signature": "EGH16HoWKHEOoZCiC8fBR9NGn5kbNJewwErwMtNA/ou5vKsxt8Tekjas5mfF17g5x5kNw/oAE0ziAXuvGixdBQ=="
+              }
+            ]
+          }
+        ],
+        "payloads": {
+          "source:nft-genesis": {
+            "motif": "synthetic collaborative observatory"
+          }
+        }
+      },
+      "output": {
+        "result": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "result",
+            "exchangeId": "exchange:nft-genesis",
+            "agreementHash": "a48026f265a05bc52549efc9dd28e5527e1c19ed8a1dfc8671f92f4bd636fcd8",
+            "outputHash": "991f6f07a378c0f925ff06d4e11cd4fb5c15792318120215fc74c405036d6cea",
+            "output": {
+              "kind": "nft-create",
+              "assetId": "simulated:nft-create:a48026f265a05bc52549efc9",
+              "simulation": true,
+              "plan": {
+                "kind": "nft-create",
+                "seatId": "seat:demo",
+                "predecessor": null,
+                "beneficiary": "org:publisher"
+              },
+              "derivedFrom": "081bf6ff37001a3280b53deb6d0d94272349bf7404a543d8671c77f922ed5fdd"
+            }
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "GlATi7mnSiRBwfIr1e71PtQNGtzLtWDzwGPto11oTYanpxfEjOFES4sS8PUnMllk9W0ALnWg0fv/WA1YwHvBDw=="
+            }
+          ]
+        },
+        "receipt": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "receipt",
+            "exchangeId": "exchange:nft-genesis",
+            "agreementHash": "a48026f265a05bc52549efc9dd28e5527e1c19ed8a1dfc8671f92f4bd636fcd8",
+            "grantHash": "752f3dce2451eb0953af312b638bc88b562ccb831c253f0c3c2c0aee49aba810",
+            "principal": "org:publisher",
+            "agent": "agent:maker",
+            "recipient": "org:publisher",
+            "outputHash": "991f6f07a378c0f925ff06d4e11cd4fb5c15792318120215fc74c405036d6cea",
+            "resultHash": "8658e296b9891bb2b01aa2280b8d6345d61a59cd6cf436dfa213ce4e81f0658a",
+            "status": "DELIVERED",
+            "allocation": {
+              "beneficiary": "org:publisher",
+              "chargeMinor": 0,
+              "unit": "NONE"
+            },
+            "sequence": 3,
+            "previousReceiptHash": "357eabec126817f49fb7a9b0c21baad638b14d379df37fa019151cefff2fa669"
+          },
+          "signatures": [
+            {
+              "signer": "operator:local",
+              "signature": "FhoGkInamHoJOHS3mJiwM4EsLXTQR2CG2WrVmDZqAjcO3pKeVT1tOKPVQO23AtdFE1Xf3OGa6PUSK0aE4Ki8Bg=="
+            }
+          ]
+        }
+      },
+      "acknowledgement": {
+        "body": {
+          "version": "agent-sdp404/2.0",
+          "domain": "local:demo",
+          "type": "acknowledgement",
+          "exchangeId": "exchange:nft-genesis",
+          "receiptHash": "b3e18497e3ec0c172e3c5e0278e97d22609888cd7eb8498909fd5f7795ba44d7",
+          "recipient": "org:publisher"
+        },
+        "signatures": [
+          {
+            "signer": "org:publisher",
+            "signature": "uBtjM3lkUbR3fzeafIXJCEpIFmjU3akwRjjVnQgowfGABlGRgOfV7+xQJIZBuc9nQWHdBxkp7bCdenQd+s8sBQ=="
+          }
+        ]
+      }
+    },
+    {
+      "input": {
+        "grant": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "mandate",
+            "grantId": "grant:nft-successor",
+            "principal": "org:incoming",
+            "agent": "agent:maker",
+            "recipient": "org:incoming",
+            "purpose": "purpose:nft-successor",
+            "sourceIds": [
+              "source:nft-successor"
+            ],
+            "capability": "nft-create",
+            "operations": [
+              "derive",
+              "disclose",
+              "invoke"
+            ],
+            "notBefore": 1793361540,
+            "expiresAt": 1793365200,
+            "maxUses": 1,
+            "maxChargeMinor": 0,
+            "assignableAgents": [
+              "agent:successor"
+            ]
+          },
+          "signatures": [
+            {
+              "signer": "org:incoming",
+              "signature": "u49N32TvFjuFoHovix7AUg77w1ufWbdEwJ19uy5Xt+MKVVWDpGd4bRCSdfGnHIVyeOW3dDvcXKHsyKG+eMfvBQ=="
+            }
+          ]
+        },
+        "agreement": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "agreement",
+            "exchangeId": "exchange:nft-successor",
+            "grantId": "grant:nft-successor",
+            "grantHash": "777490f699ab314e6605f16b83d65036907afc6cfbd6e744f819aa68bc4e4cf6",
+            "principal": "org:incoming",
+            "agent": "agent:maker",
+            "recipient": "org:incoming",
+            "purpose": "purpose:nft-successor",
+            "capability": "nft-create",
+            "sources": [
+              {
+                "sourceId": "source:nft-successor",
+                "descriptorHash": "076b8be1eba258ec428d76b482d883f9cc2deff5633cc9a92cbee8c7b9cb46e4"
+              }
+            ],
+            "plan": {
+              "kind": "nft-create",
+              "seatId": "seat:demo",
+              "predecessor": "simulated:nft-create:a48026f265a05bc52549efc9",
+              "beneficiary": "org:incoming"
+            },
+            "nonce": "nonce:nft-successor",
+            "expiresAt": 1793362200,
+            "assignmentHash": null
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "cGptg6ml1GhNqbATJGNNqrzvIeP9v5P9g8XgRXIfTgjKgmvhxXM/L38KFSELQOXtNTkrGNYPD+LpMaQWY9F1Ag=="
+            },
+            {
+              "signer": "org:incoming",
+              "signature": "szYRC4XfRXsdF+gU4YAjiPbtg7Eoh0j2wjzIy2bGWVvoQZ37J0xPZ5rKwKHlGorFosrADdAvC0V4NtJ6zrDABA=="
+            },
+            {
+              "signer": "org:publisher",
+              "signature": "EhIa2QQRdRfAqrk0w9ACQk15UjoTaM+zPOzj0dmMNv8Wvy6amvaytGK05sOT0u3K92xLWl+TgDjmqg3YtzziAg=="
+            }
+          ]
+        },
+        "sources": [
+          {
+            "body": {
+              "version": "agent-sdp404/2.0",
+              "domain": "local:demo",
+              "type": "source",
+              "sourceId": "source:nft-successor",
+              "kind": "environmental",
+              "controller": "org:source",
+              "access": "restricted",
+              "termsRef": "example:synthetic-use-only",
+              "payloadHash": "433f8edec9824def5a3a44e87dd8d7f4b47f69c1ed5a319efaed41157684ec78",
+              "allowedPrincipals": [
+                "org:incoming"
+              ],
+              "allowedPurposes": [
+                "purpose:nft-successor"
+              ],
+              "audiences": [
+                "org:incoming"
+              ],
+              "allowedOperations": [
+                "derive",
+                "disclose"
+              ]
+            },
+            "signatures": [
+              {
+                "signer": "org:source",
+                "signature": "9a8adM1lDXaSD1AFHmG8wQbk7LIIzHClbJ9wfai8PbJ7PbSebDelFb6O5cTLt1Z4ErusdrvyR8jORxj0zOH+AQ=="
+              }
+            ]
+          }
+        ],
+        "payloads": {
+          "source:nft-successor": {
+            "motif": "synthetic estuary observations"
+          }
+        }
+      },
+      "output": {
+        "result": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "result",
+            "exchangeId": "exchange:nft-successor",
+            "agreementHash": "4dbca3ecd89a9b3f02636e850a071169b18649d38cae57d83cb468c9b6325413",
+            "outputHash": "3139e30265e2975cff081a6238ebb34d4c62e6a4c21ee7972205038590655f42",
+            "output": {
+              "kind": "nft-create",
+              "assetId": "simulated:nft-create:4dbca3ecd89a9b3f02636e85",
+              "simulation": true,
+              "plan": {
+                "kind": "nft-create",
+                "seatId": "seat:demo",
+                "predecessor": "simulated:nft-create:a48026f265a05bc52549efc9",
+                "beneficiary": "org:incoming"
+              },
+              "derivedFrom": "19ea767cadf06a3d534f7c212e6c167d87e17d95249f6190eb427892a3acdb56"
+            }
+          },
+          "signatures": [
+            {
+              "signer": "agent:maker",
+              "signature": "AM+qRQznktKA4S5fba94M8ARKz9npGH0bukyjlxRTxnyZs3W6oXRXkLhMYWzkKWwbWs1vOkxLVdncRP6tc8VAw=="
+            }
+          ]
+        },
+        "receipt": {
+          "body": {
+            "version": "agent-sdp404/2.0",
+            "domain": "local:demo",
+            "type": "receipt",
+            "exchangeId": "exchange:nft-successor",
+            "agreementHash": "4dbca3ecd89a9b3f02636e850a071169b18649d38cae57d83cb468c9b6325413",
+            "grantHash": "777490f699ab314e6605f16b83d65036907afc6cfbd6e744f819aa68bc4e4cf6",
+            "principal": "org:incoming",
+            "agent": "agent:maker",
+            "recipient": "org:incoming",
+            "outputHash": "3139e30265e2975cff081a6238ebb34d4c62e6a4c21ee7972205038590655f42",
+            "resultHash": "2d2702c31f89885cff485d1393591c5b9cda94b7917705ff177ad6c6972c8c39",
+            "status": "DELIVERED",
+            "allocation": {
+              "beneficiary": "org:incoming",
+              "chargeMinor": 0,
+              "unit": "NONE"
+            },
+            "sequence": 4,
+            "previousReceiptHash": "b3e18497e3ec0c172e3c5e0278e97d22609888cd7eb8498909fd5f7795ba44d7"
+          },
+          "signatures": [
+            {
+              "signer": "operator:local",
+              "signature": "Cwtnu+H6gyLp8ruafvWKA8TiRGGVUA1J3Ck/LqfbYO39sxsYswuVTW6wtBUQR2Xcjw9Vmc5KFRoFgL7cLNeDCQ=="
+            }
+          ]
+        }
+      },
+      "acknowledgement": {
+        "body": {
+          "version": "agent-sdp404/2.0",
+          "domain": "local:demo",
+          "type": "acknowledgement",
+          "exchangeId": "exchange:nft-successor",
+          "receiptHash": "d0d16feb647a0131f1b58acd3a983ed4a0565e07ff67faf2c1446ff55cabf71f",
+          "recipient": "org:incoming"
+        },
+        "signatures": [
+          {
+            "signer": "org:incoming",
+            "signature": "VrffYIcH8ppw3hcxtokeZIM7v7j8seDRgb9bgNuxY8ssU/c9qom2QDLagLBzJc1kMldEgqpHSmeT8l2nj5RwDQ=="
+          }
+        ]
+      }
+    }
+  ],
+  "conflictingReplay": "IDEMPOTENCY_CONFLICT",
+  "assetState": [
+    {
+      "id": "simulated:nft-create:4dbca3ecd89a9b3f02636e85",
+      "kind": "nft",
+      "owner": "org:incoming",
+      "retired": 0
+    },
+    {
+      "id": "simulated:nft-create:a48026f265a05bc52549efc9",
+      "kind": "nft",
+      "owner": "org:publisher",
+      "retired": 1
+    },
+    {
+      "id": "simulated:token-create:fdc74536f135c988c90e9144",
+      "kind": "token",
+      "owner": "org:publisher",
+      "retired": 0
+    }
+  ],
+  "allowanceState": [
+    {
+      "id": "grant:nft-genesis",
+      "agent": "agent:maker",
+      "uses": 1,
+      "epoch": 0
+    },
+    {
+      "id": "grant:nft-successor",
+      "agent": "agent:maker",
+      "uses": 1,
+      "epoch": 0
+    },
+    {
+      "id": "grant:research",
+      "agent": "agent:maker",
+      "uses": 1,
+      "epoch": 0
+    },
+    {
+      "id": "grant:token",
+      "agent": "agent:successor",
+      "uses": 1,
+      "epoch": 1
+    }
+  ]
+}

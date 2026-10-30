@@ -1,95 +1,93 @@
-# Silicon Dreamers Protocol (SDP)
+<p align="center"><img src="assets/brand-header.svg" alt="AGENT-SDP404 — Data becomes capability" width="100%"></p>
 
-**A protocol for personal information value exchange through user-authorized AI agents.**
+# AGENT-SDP404
 
-Version **1.0.0** · **Apache-2.0** · [Protocol specification](spec/SDP-0001-core.md)
+**A protocol for turning data into capabilities, exchanges and attributable outcomes through agents.**
 
-A person's experience, preferences, knowledge, intentions and judgment carry value. A personal agent can interpret that context and turn it into something another person or system can use: an answer, a creative work, a service, a request, a decision or an authorized action.
+[Specification 2.0.0](spec/SDP404-0001-core.md) · [Run the reference alpha](#run-an-exchange) · [Apache-2.0](LICENSE) · [Release notes](releases/v2.0.0.md)
 
-**SDP describes how that value leaves private context, enters an authorized exchange, and returns to the person as a result, benefit or new understanding.**
+Data comes from people, organizations, public sources, research, devices, environments and other agents. AGENT-SDP404 describes how an Agent can use that data under its source conditions, agree on an exchange, execute a bounded capability and return verifiable results to the right recipients.
 
-The exchange may involve information, capability, execution rights, compensation or collaboration. It need not involve raw-data disclosure, an NFT, a payment or a blockchain.
+**Source rules travel into the task. Authority travels with the action. Evidence travels with the result.**
 
-## The central relationship
+## The exchange path
 
-```mermaid
-flowchart LR
-    P[Personal context] --> A[User-authorized agent]
-    M[User mandate] --> A
-    A --> R[Representation or capability]
-    R --> X[Authorized exchange]
-    X --> O[Result and value allocation]
-    O --> F[Authorized feedback]
-    F --> P
-```
+**Data sources → Agent processing → Agreed exchange → Result & rights → Authorized state update**
 
-The feedback arrow is permissioned. Participation does not automatically authorize writing counterparties' information into memory.
+A data source and the principal authorizing a task may have different controllers. Both sets of conditions matter. Public availability does not imply unrestricted reuse, and operating an Agent does not automatically grant control over its inputs or outputs.
 
-A personal agent is an agent authorized to represent a principal within a defined scope. It can run locally or through a hosted service. Its location, model vendor or brand does not by itself establish authority.
+## Run an exchange
 
-## What SDP defines
-
-| Concept | Protocol question |
-|---|---|
-| **Principal** | Whose interests and authority does the agent represent? |
-| **Context** | What information can it access, and for what purpose? |
-| **Mandate** | What may it infer, disclose, invoke, delegate or spend? |
-| **Representation** | What leaves the private boundary: a result, offer, capability or selected information? |
-| **Exchange agreement** | What is each party committing to provide, receive and permit? |
-| **Execution receipt** | What happened, under which authorization, and with what evidence? |
-| **Value allocation** | Who receives the result, payment, credit, access or other benefit? |
-| **Feedback** | What may be retained or returned to the principal's agent? |
-
-The core contribution is the link between personal context, bounded agent representation, external exchange and attributable outcomes. Application-specific assets and execution rights are expressed through profiles.
-
-## Developer authority is bounded
-
-Developers provide applications, policies, interfaces and infrastructure. Administrator status alone does not grant authority to disclose personal context, execute a user's transaction, redirect their result or exercise a capability assigned to them.
-
-Agents receive bounded autonomy from the principal. A developer signature, successful login or model response cannot substitute for that authorization. Profiles must explain which limits are enforced by code, which depend on an operator, and which are only attested by an agent.
-
-See [Authority and AI execution](spec/SDP-0002-authority-and-ai.md).
-
-## Application examples
-
-- **Knowledge collaboration:** experience becomes a scoped answer or service; private source material stays within the permitted boundary.
-- **Intent matching:** preferences and constraints become a minimal request that can be matched without publishing a full personal profile.
-- **Agent-to-agent work:** one agent delegates a bounded subtask; the recipient receives only the permitted inputs and execution rights.
-- **Creative issuance:** personal context becomes a work, with an explicit publication or mint entitlement.
-- **[Agent-created tokens](cases/agent-created-token/README.md):** personal intent and community context become a token concept, an authorized creation plan and an explicit allocation of units and control.
-
-The earlier NFT, mint-entitlement and seat-succession design is preserved in [the agent-created NFT case](cases/agent-created-nft/README.md). It is one application of SDP, not the definition of the protocol.
-
-## Repository map
-
-| Document | Purpose |
-|---|---|
-| [Core](spec/SDP-0001-core.md) | Participants, objects, operations, exchange lifecycle and invariants |
-| [Authority and AI](spec/SDP-0002-authority-and-ai.md) | Personal-agent delegation, privacy and non-discretionary developer powers |
-| [Exchange and rights](spec/SDP-0003-exchange-and-rights.md) | Use, delegation, assignment, execution and value allocation |
-| [Architecture](docs/architecture.md) | Components, trust boundaries and interaction sequences |
-| [Security](docs/security.md) | Disclosure, prompt injection, replay, revocation and operator risks |
-| [Application profiles](cases/README.md) | How examples map to the core |
-| [Mandate schema](schemas/mandate.schema.json) | An illustrative authorization envelope for SDP 1.0 |
-| [Example exchanges](examples/exchanges.json) | Synthetic, non-executable scenarios |
-| [Validation](docs/validation.md) | Local structural and consistency checks |
-| [Authorship](AUTHORS.md) | Origin and attribution |
-| [Changelog](CHANGELOG.md) | Scope changes |
-
-## Status and validation
-
-SDP 1.0.0 is the first formal open-source specification release. It defines protocol semantics, authority boundaries and application cases, with illustrative schemas and local validation tools. A conforming deployment must supply its concrete wire profile and enforcement evidence; this release does not include a production runtime or audited contracts. Specification versions are independent of application deployment versions.
-
-See the [1.0.0 release notes](releases/v1.0.0.md) and [versioning policy](docs/versioning.md).
+Python 3.10+; no wallet, API key or model account required. From this checkout:
 
 ```sh
-python tools/validate.py
+python -m pip install -r requirements.txt
+python -m agent_sdp404.demo --output dist/demo-trace.json
+python -m agent_sdp404.verify_trace dist/demo-trace.json
 ```
 
-The standard-library validator checks local links, mandate structure, example references and authorization-boundary fixtures. It does not execute an exchange, verify a signature or prove an application's privacy or autonomy guarantees.
+The demo performs four signed exchanges and deliberately rejects a conflicting replay:
 
-Protocol concept attribution: **Silicon Dreamers Protocol**. See [contribution guidance](CONTRIBUTING.md) and [rights status](RIGHTS.md). Repository: [Agent-SDP404/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol).
+```text
+exchange:research: DELIVERED
+Exact replay: same receipt; no additional allowance consumed
+Changed replay: IDEMPOTENCY_CONFLICT
+exchange:token: DELIVERED
+exchange:nft-genesis: DELIVERED
+exchange:nft-successor: DELIVERED
+```
 
-## License
+**Real:** Ed25519 verification, accepted terms, source-policy checks, SQLite transactions, allowance consumption, assignment, revocation and signed receipts.
 
-The specification, documentation, examples and validation tools are released under the [Apache License 2.0](LICENSE). See [NOTICE](NOTICE) for attribution and [RIGHTS.md](RIGHTS.md) for scope.
+**Simulated:** NFT issuance/succession and token creation. These adapters operate on a local ledger; they do not mint on a blockchain or move funds. Agent processing is deterministic fixture logic, not a live model call.
+
+Inspect the committed [public proof bundle](examples/traces/local-exchange.json), [walkthrough](docs/quickstart.md) and [enforcement matrix](docs/conformance.md). All demonstration data is synthetic; private keys are generated in memory and are never exported.
+
+## What the protocol adds
+
+| Layer | What AGENT-SDP404 makes explicit |
+|---|---|
+| Source | Origin, controller, use conditions, disclosure audience and snapshot identity |
+| Authority | Who may invoke an Agent, for which purpose, inputs and recipients |
+| Agreement | What parties accepted, which capability will run and who receives the result |
+| Execution rights | Which finite right is consumed, delegated or assigned, without duplicating it |
+| Evidence | Commitments connecting accepted terms, inputs, outputs and receipts |
+| Feedback | Where a result may be retained or applied: knowledge base, system, device or Agent |
+
+The reference profile demonstrates these relationships in one bounded setting. It does not claim to invent authentication, agent messaging or token standards. See [relationship to MCP, A2A and existing infrastructure](docs/positioning.md).
+
+## Explore the applications
+
+| Case | Data becomes | Try or inspect |
+|---|---|---|
+| Research and device observations | A scoped analytical result | [Signed research exchange](cases/data-exchange/README.md) |
+| Agent-created NFTs | A new artifact and a succession right | [Genesis and successor trace](cases/agent-created-nft/README.md) |
+| Agent-created tokens | An issuance plan, allocated units and explicit control | [Creation-right handoff and token trace](cases/agent-created-token/README.md) |
+| Organization knowledge, matching and coordination | Answers, requests and delegated tasks | [Additional application patterns](cases/README.md) |
+
+NFTs and tokens are two applications. The protocol is independent of both, and independent of the Silicon Dreamers NFT project. There is currently no separate protocol website; this repository is the primary reference.
+
+## Read, build, verify
+
+- [Core specification](spec/SDP404-0001-core.md): source-aware actors, objects and lifecycle.
+- [Agent authority](spec/SDP404-0002-agent-authority.md): bounded autonomy and developer authority.
+- [Exchange and rights](spec/SDP404-0003-exchange-rights.md): acceptance, use, delegation, assignment and allocation.
+- [Local wire profile](spec/SDP404-0004-local-wire.md): concrete envelopes, signing bytes, state transitions and errors.
+- [Wire schema](agent_sdp404/schemas/wire.schema.json): sources, mandates, agreements, assignments, results, receipts and acknowledgements.
+- [Architecture](docs/architecture.md), [security](docs/security.md), [validation](docs/validation.md), [roadmap](docs/roadmap.md).
+
+```sh
+python tools/check.py
+```
+
+## Status and compatibility
+
+**Specification: 2.0.0. Reference implementation: alpha.** The local profile is executable; network transports, live models, chain adapters and distributed enforcement are not included. Claims and limitations are mapped in [the conformance matrix](docs/conformance.md).
+
+The renamed, expanded data model and signed profile are not wire-compatible with v1 examples. See [migration and versioning](docs/versioning.md). The original [v1.0.0 release](https://github.com/Agent-SDP404/sdp-protocol/releases/tag/v1.0.0) remains unchanged.
+
+## Participate
+
+Start with [open engineering questions](docs/roadmap.md), then propose a specific profile or implementation improvement using [CONTRIBUTING.md](CONTRIBUTING.md). Report public specification issues through [GitHub Issues](https://github.com/Agent-SDP404/sdp-protocol/issues); do not publish credentials or exploitable private-system details.
+
+Original repository materials are licensed under [Apache-2.0](LICENSE). See [NOTICE](NOTICE), [authorship](AUTHORS.md) and [rights scope](RIGHTS.md).

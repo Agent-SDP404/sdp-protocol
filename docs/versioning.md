@@ -1,15 +1,19 @@
-# Versioning and compatibility
+# Versioning and migration
 
-The current specification release is recorded in [VERSION](../VERSION). Release tags use `vMAJOR.MINOR.PATCH`.
+Current specification: [2.0.0](../VERSION). Reference implementation maturity: alpha. Tags use `vMAJOR.MINOR.PATCH`; a specification release does not imply a production-ready runtime.
 
-- **Major:** an incompatible change to normative semantics, required authority boundaries or an established versioned data envelope.
-- **Minor:** a backward-compatible optional capability or profile addition that does not weaken existing requirements.
-- **Patch:** editorial corrections and clarifications that do not change required behavior.
+- Major changes alter normative semantics or established wire formats incompatibly.
+- Minor changes add compatible optional capabilities/profiles.
+- Patch changes correct wording or defects without changing the declared protocol contract.
 
-Implementations must declare the exact specification version and application/wire profiles they implement. A shared major version alone does not establish transport compatibility or deployment conformance.
+## From v1 to v2
 
-The illustrative mandate envelope uses `sdp/1.0`. The transition from the pre-release `sdp/0.2-draft` label does not add execution authority. Examples in this repository use the released label; the local structural validator does not accept the previous label. Implementations handling old records must explicitly version and validate them rather than silently relabel signed data.
+The protocol is now named **AGENT-SDP404**. Its scope includes personal, organizational, public, research, device, environmental, agent-generated and composite data. A principal is an accountable authorizing identity, while a data source can have a separate controller.
 
-Application cases are included in the specification release but do not impose their domain-specific states on other applications. Example timestamps and synthetic identifiers are test fixtures, not currently valid execution authorizations.
+V1 supplied abstract semantics and an illustrative `sdp/1.0` mandate envelope. V2 adds a concrete `agent-sdp404/2.0` signed local profile with source descriptors, accepted agreements and receipts. These are not compatible signing formats. Do not relabel old signed objects; obtain new authorization against the new semantics.
 
-Published release tags must not be moved. Corrections to a published release are made in a new version with a changelog entry. Repository publication, formal specification release, runtime implementation and deployment verification are distinct milestones.
+The [legacy v1 fixtures](../examples/legacy-v1/mandates.json) and [schema](../schemas/legacy-v1/mandate.schema.json) remain explicitly segregated. They are not runtime authorizations. The [v1.0.0 tag and release](https://github.com/Agent-SDP404/sdp-protocol/releases/tag/v1.0.0) remain unchanged, including their original name and scope.
+
+The GitHub repository address remains `Agent-SDP404/sdp-protocol` to preserve published links. The repository is the protocol's primary reference; it does not designate an NFT project's site as a protocol website.
+
+Published tags are not moved. Implementations declare both specification version and wire profile. No automatic compatibility is inferred from a shared brand name or major version.

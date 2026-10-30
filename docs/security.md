@@ -1,32 +1,33 @@
-# Security and trust model
+# Security and trust boundaries
 
-The assets are private context, delegated authority, finite execution rights, committed results, accepted allocations and execution evidence. Adversaries can include malicious counterparties, compromised agents, dishonest services and administrators acting beyond their mandate.
+The assets are source data, execution authority, finite rights, accepted terms, results and evidence. Source controllers, task principals, Agent hosts, counterparties and operators may be different parties.
 
-| Threat | Required or recommended control | Residual limitation |
+| Threat | Implemented local control | Remaining boundary |
 |---|---|---|
-| Prompt injection in context/tool output | Separate data from instructions; enforce actions outside the model | Model-side instruction following alone is insufficient |
-| Overbroad consent | Distinct access, derivation, disclosure, spending and memory permissions | Users can still knowingly grant broad scope |
-| Hidden model-provider disclosure | Declare processor audiences and retention | Hosted providers may still observe permitted inputs |
-| Sensitive inference | Minimize and assess derived outputs before delivery | Filtering cannot guarantee that no inference is possible |
-| Forged or replayed mandate | Authenticated binding, exact signed scope, expiry, nonce and replay ledger | This repository does not implement cryptography |
-| Duplicate delegated spending | Shared atomic parent/child allowance accounting | Distributed accounting requires defined consistency |
-| Assignment double use | Atomic invalidation/grant or a declared locking protocol | Cross-domain finality and failures need reconciliation |
-| Revocation race | Declared freshness and irreversible-action checkpoints | Revocation cannot recall disclosed information |
-| Operator substitution | Commit terms/output; bind recipient and verify at execution | Operator may censor, pause or refuse service |
-| Receipt correlation | Minimal metadata, opaque context handles and controlled access | Even metadata can identify behavior |
-| Tool timeout | Reconcile stable operation ID before irreversible retry | External systems may lack idempotency support |
-| Feedback poisoning | Separate memory permission; treat feedback as untrusted input | Retained misinformation can still degrade decisions |
+| Forged authority or changed terms | Ed25519, schema, domain and scope checks | Registry key bindings must be trustworthy |
+| Wrong source or substituted bytes | Signed descriptor and payload/descriptor hashes | Controller assertions do not prove ownership, truth or sensor authenticity |
+| Unauthorized disclosure | Source audience/purpose checks plus task recipient binding | No semantic privacy filter; live model-provider disclosure needs its own adapter policy |
+| Repeated execution | Persistent exchange identity, nonce and transactional consumption | Only local SQLite effects are atomic |
+| Concurrent duplicates | BEGIN IMMEDIATE and uniqueness | No distributed consensus or cross-service atomicity |
+| Creation-right duplication | Principal/current/new Agent signatures and serialized holder change | Database operator remains trusted |
+| Revoked or expired new action | Checks under the ledger transaction | Delivered data cannot be recalled; exact result readback remains possible |
+| Changed result or receipt | Agent/operator signatures and accepted-term bindings | Byte integrity is not usefulness or proof of AI authorship |
+| Withheld or forked history | Hash-chained receipts and retained checkpoints | No public transparency log or operator-independent consensus |
+| Prompt injection or poisoned sources | No model/tool prompt execution in the reference | Live Agent integration must enforce authority outside the model |
+| Accidental memory/state write | No automatic feedback operation in local-1 | Other profiles must explicitly authorize writes |
 
-## Enforcement disclosure
+## Key custody and source data
 
-For each guarantee, publish the enforcing component, proof or test method, administrator override, dependency assumptions and failure behavior. Distinguish cryptographic checks, transactional server checks, client controls, agent attestations and policy promises.
+Demo identities and keys are generated in memory. The public trace contains only public keys, synthetic payloads and signed records. Never replace those inputs with real private data and publish the resulting bundle without checking disclosure rights.
 
-A signature proves control of a signing key under a defined verification scheme; it does not establish the truth of every assertion. A content hash is not evidence of confidential handling. A ledger event establishes only the event semantics under the stated finality model.
+The example SQLite ledger stores outputs in plaintext. Filesystem permissions, encryption, retention, secure deletion, real key custody and authenticated network transport are deployment responsibilities, not guarantees of this alpha. The operator can deny service or alter its database; valid signatures and retained receipts expose some changes but do not eliminate that trust.
 
-## Domain-specific cases
+Private-source commitments can leak guessable values. The public trace intentionally hashes synthetic data. Real profiles should use appropriate private storage, opaque references and disclosure controls rather than copy the demo's public-payload layout.
 
-A bearer succession credential can be stolen, copied or leaked through logs. The NFT case therefore requires secret handling, fresh authenticated retrieval, explicit recipient binding and authoritative single consumption. These controls address that case; they are not a reason to make bearer credentials mandatory for every SDP application.
+## Implementation limitations
+
+The code is a small inspectable reference, not an audited authorization service. It has no network endpoint, real-world identity enrollment, live model provider, wallet, paid settlement or multi-tenant deployment hardening. The offline proof verifier accepts a bundle-supplied synthetic registry for demonstrations; production verification must anchor identities independently.
 
 ## Reporting
 
-Do not place private context, credentials, signing keys or exploitable live-system details in public issues. This project has no designated private security contact yet. A maintainer must establish a contact before deploying or presenting the repository as an operational service.
+Use [GitHub Issues](https://github.com/Agent-SDP404/sdp-protocol/issues) for non-sensitive specification and reproducibility problems. A private security contact has not been established. Do not publish credentials, private inputs or exploit details affecting a live third-party deployment in a public issue.

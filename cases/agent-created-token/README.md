@@ -1,24 +1,33 @@
 # Application case: agent-created tokens
 
-**A personal agent turns a principal's intent and community context into an authorized token creation and distribution plan.**
+**An Agent turns permitted project data, organizational intent or community context into an authorized token creation and distribution plan.**
 
-Status: illustrative SDP application profile. This document describes a proposed workflow, not a deployed token, launch service or executable contract. It creates no requirement for other SDP applications to issue tokens.
+Status: illustrative AGENT-SDP404 application profile. This document describes a proposed workflow, not a deployed token, launch service or executable contract. It creates no requirement for other AGENT-SDP404 applications to issue tokens.
 
-## 1. From personal context to a shared instrument
+## Run the case
 
-A person may have an idea, a recognizable voice, a community, a body of work or a way of organizing collective effort. Their agent can interpret that permitted context and express it as a token concept: what it represents, how it will be used, who can participate, and how issuance and control should work.
+Run `python -m agent_sdp404.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:token` in [the signed proof bundle](../../examples/traces/local-exchange.json).
 
-The agent's contribution is broader than filling in a name and symbol. It connects personal understanding to a public expression and a set of executable rules. Within the user's mandate, it can develop the concept, prepare public metadata, select an allowed issuance template, propose distribution and execute an approved creation plan.
+The fixture begins with a principal-approved one-use creation mandate, then assigns it to a successor Agent with principal/current-agent/successor signatures. The agreement pins a synthetic 1,000-unit supply, exact allocations and named administrator. The local adapter verifies allocation totals, records the simulated token and commits a signed result/receipt. The recipient signs an acknowledgement.
+
+This is a real signed exchange with a simulated issuance adapter. It performs no blockchain transaction. The failure suite covers missing handoff acceptance, execution by the old holder, reused allowance and allocation mismatch. See [local wire semantics](../../spec/SDP404-0004-local-wire.md) and [tests](../../tests/test_reference.py).
+
+
+## 1. From permitted data to a shared instrument
+
+A person, organization or collective may have an idea, a dataset, a community, a body of work or a way of organizing shared effort. An authorized Agent can interpret that permitted context and express it as a token concept: what it represents, how it will be used, who can participate, and how issuance and control should work.
+
+The agent's contribution is broader than filling in a name and symbol. It connects source information and intended use to a public expression and a set of executable rules. Within the user's mandate, it can develop the concept, prepare public metadata, select an allowed issuance template, propose distribution and execute an approved creation plan.
 
 The token becomes an externally usable representation within an application. It may support participation, access, recognition or another explicitly defined coordination mechanism. Possessing the token does not automatically convey ownership of the principal's memories, identity, future work or agent.
 
-**Personal context → agent interpretation → token concept → authorized creation → agreed distribution → participant interaction and feedback.**
+**Permitted source data → agent interpretation → token concept → authorized creation → agreed distribution → participant interaction and feedback.**
 
 Token creation is the issuance step. Exchange occurs when the resulting representation, access or participation rights are delivered and used under an agreement. Creating a token alone does not establish demand, economic value or fulfilled utility.
 
-## 2. Mapping to SDP
+## 2. Mapping to AGENT-SDP404
 
-| SDP object | Token-creation application |
+| AGENT-SDP404 object | Token-creation application |
 |---|---|
 | Principal | The person or organization authorizing the token initiative |
 | Context | Approved intent, preferences, community information and project material |
@@ -91,7 +100,7 @@ The developer may supply templates, factories, interfaces and verification servi
 
 If the implementation necessarily retains operator powers, the profile must disclose them before acceptance. An Agent deploying through a platform does not make that platform permissionless or remove its control over the implementation.
 
-## 7. Creation rights can move without transferring personal context
+## 7. Creation rights can move without transferring source data
 
 Suppose the principal authorizes one token-creation operation and delegates execution to a specialized issuance agent. The receiving agent gets the approved plan and bounded execution authority. It does not receive every source memory used to develop the concept.
 
@@ -99,7 +108,7 @@ Delegation preserves the principal's authority and shares the parent's allowance
 
 After creation, transferring token balances, transferring an administrator role, and transferring an unconsumed creation entitlement remain distinct operations. A token holder does not automatically become the user's agent or acquire future issuance authority.
 
-This is the generalized form of issuance-right transfer: **the right to perform a specified action moves under explicit conditions; the person's identity and private context do not move with it.**
+This is the generalized form of issuance-right transfer: **the right to perform a specified action moves under explicit conditions; source ownership and access to underlying data do not automatically move with it.**
 
 ## 8. Failure, recovery and evidence
 
@@ -111,8 +120,8 @@ A completion report distinguishes plan acceptance, creation execution, finality,
 
 ## 9. What this case demonstrates
 
-The same SDP chain can produce an answer, a creative work or a token-backed coordination mechanism. In each case, personal information supplies context; the agent produces an outward representation; authorization constrains execution; and the result returns to the agreed beneficiaries.
+The same AGENT-SDP404 chain can produce an answer, a creative work or a token-backed coordination mechanism. In each case, permitted data supplies context; the agent produces an outward representation; authorization constrains execution; and the result returns to the agreed beneficiaries.
 
-Token issuance is one adapter for that chain. It does not redefine SDP as a token-launch protocol.
+Token issuance is one adapter for that chain. It does not redefine AGENT-SDP404 as a token-launch protocol.
 
-See [the general core](../../spec/SDP-0001-core.md), [AI authority](../../spec/SDP-0002-authority-and-ai.md), [exchange and rights](../../spec/SDP-0003-exchange-and-rights.md) and [application cases](../README.md).
+See [the general core](../../spec/SDP404-0001-core.md), [AI authority](../../spec/SDP404-0002-agent-authority.md), [exchange and rights](../../spec/SDP404-0003-exchange-rights.md) and [application cases](../README.md).

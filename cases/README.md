@@ -1,33 +1,20 @@
 # Application cases
 
-Cases demonstrate the same protocol across different domains. They are illustrative designs unless explicitly identified otherwise. The NFT documents preserve the earlier application-focused draft; their domain invariants do not become global SDP requirements.
+AGENT-SDP404 applies to data from people, organizations, public resources, science, devices, environments and agents. Cases exercise that common architecture; none defines the whole protocol.
 
-| Case | Private source | Outbound value | Authority that matters | Result/value return |
-|---|---|---|---|---|
-| Knowledge service | Approved professional notes | A scoped answer | Derive and disclose to the requester | Delivered answer and agreed compensation, if any |
-| Intent matching | Preferences and constraints | A minimal matching request | Disclose selected constraints; no implicit purchase authority | Candidate matches, privately delivered |
-| Agent collaboration | Approved task inputs | A bounded subtask | Delegate within shared allowance | Subtask result and attributable completion |
-| [Agent-created tokens](agent-created-token/README.md) | Personal intent, community goals and approved project context | Token concept, creation plan and defined participation rights | Separately authorize creation, issuance, distribution and administration | Verified token identity, agreed allocations and execution receipts |
-| [Creative issuance and succession](agent-created-nft/README.md) | Participant's accessible context | Original artwork and a scoped mint opportunity | Create, publish, mint, retrieve a credential, accept succession | New work, preserved predecessor and explicit lineage |
+| Case | Sources | Exchange outcome | Evidence |
+|---|---|---|---|
+| [Research/data exchange](data-exchange/README.md) | Controller-approved research observations | Scoped aggregate and recipient acknowledgement | Runnable signed local exchange |
+| [Agent-created NFTs](agent-created-nft/README.md) | Approved contextual or generated data | New artifact, new participant, preserved predecessor | Runnable local succession simulation plus application lifecycle |
+| [Agent-created tokens](agent-created-token/README.md) | Organizational/project intent and context | Accepted creation plan, allocated units and control | Runnable local issuance simulation plus signed right assignment |
+| Knowledge service | Organization documents or professional notes | An answer with defined usage | Conceptual extension |
+| Intent matching | Permitted preferences, inventory or system constraints | A minimized request and candidate results | Conceptual extension |
+| Agent collaboration | Permitted task inputs from multiple sources | A bounded delegated task | Core semantics; delegation trees not implemented by local-1 |
 
-## Knowledge service
+## Common record
 
-An agent reads permitted expertise and answers a counterparty's question. The answer is delivered under agreed use terms. The requester receives no general access to the principal's notes. A free exchange remains valid; payment is a separate optional settlement step. Feedback enters memory only if allowed.
+Each runnable case provides input source descriptors, principal authority, accepted terms, an output, a receipt and failure behavior. The [public proof bundle](../examples/traces/local-exchange.json) contains four exchanges: research, token creation, NFT genesis and NFT succession.
 
-## Intent matching
+New profiles should identify source controllers, task principals, agents, recipients, source restrictions, execution rights, output conditions, failure states and evidence. Add domain-specific objects only after those relationships are clear.
 
-An agent derives a concise request from private preferences. It reveals necessary constraints to a matching service, receives candidate results and returns them to the principal. A match does not authorize a booking, payment or public profile. Those require their own permissions and agreement.
-
-## Agent collaboration
-
-A coordinating agent delegates a limited task to a named worker. The worker sees only necessary inputs, has narrower or equal authority and consumes the shared parent budget. It cannot gain permission to delegate again merely because it received a task.
-
-## Agent-created tokens
-
-The [agent-created token case](agent-created-token/README.md) extends this pattern to issuance. It explains how a personal agent turns context into a token concept, executes within a bounded creation mandate and returns the result to the agreed beneficiaries. Token balances, administrator roles and creation entitlements remain distinct rights.
-
-## Profile authoring rule
-
-Describe the principal, context, mandate, outbound representation, agreement, rights, recipients, execution evidence and feedback. Then add domain-specific objects. A profile should still be explainable without treating its local asset model as the protocol itself.
-
-Structured synthetic scenarios are available in [examples/exchanges.json](../examples/exchanges.json).
+The original personal-agent JSON examples remain in [legacy-v1](../examples/legacy-v1/exchanges.json) for migration context. They are not executable v2 records.

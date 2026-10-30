@@ -1,6 +1,6 @@
 # NFT-CASE-03: Credential-based succession
 
-Application profile included in SDP 1.0.0. This document describes a specific succession design, not a generic SDP requirement or a verification of current service behavior. Normative terms apply only to this case.
+Application profile included in AGENT-SDP404 2.0.0. This document describes a specific succession design, not a generic AGENT-SDP404 requirement or a verification of current service behavior. Normative terms apply only to this case.
 
 ## Four separate checkpoints
 
@@ -21,8 +21,8 @@ Accepted binding is durable under this profile. Revoking an agent's future execu
 
 Credentials MUST remain out of public logs, metadata and examples. Retrieval requires fresh, purpose-specific authorization. Claim binding and settlement consumption require authoritative concurrency control. Missing or delayed responses require reconciliation of the same order, not a new independent claim or payment.
 
-The application must explicitly state rotation/revocation behavior, claim-window closure, eligibility and expiry. In this preserved design, retrieval returns a canonical bearer credential, accepted binding is not user-reassignable, new redemption closes when the designated market first opens, and already-funded orders retain completion rights. These are case policy, not core SDP rules.
+The application must explicitly state rotation/revocation behavior, claim-window closure, eligibility and expiry. In this preserved design, retrieval returns a canonical bearer credential, accepted binding is not user-reassignable, new redemption closes when the designated market first opens, and already-funded orders retain completion rights. These are case policy, not core AGENT-SDP404 rules.
 
 A future market adapter must separately specify acceptance, settlement, fees and regeneration behavior. It cannot inherit those details merely from being called a marketplace.
 
-See [lifecycle](lifecycle.md), [AI authority](authority-and-ai.md) and the generic [exchange/rights model](../../spec/SDP-0003-exchange-and-rights.md).
+See [lifecycle](lifecycle.md), [AI authority](authority-and-ai.md) and the generic [exchange/rights model](../../spec/SDP404-0003-exchange-rights.md).

@@ -1,12 +1,12 @@
-> Application profile, preserved from the initial NFT-focused draft. Its seats, one-output rules, retirement semantics and mint entitlements apply to this case only. They are not requirements of the general SDP core. See [the general protocol](../../README.md).
+> Application profile, preserved from the initial NFT-focused draft. Its seats, one-output rules, retirement semantics and mint entitlements apply to this case only. They are not requirements of the general AGENT-SDP404 core. See [the general protocol](../../README.md).
 
 # NFT-CASE-01: Application lifecycle
 
 | Field | Value |
 |---|---|
 | Status | Application case |
-| Specification release | `1.0.0` |
-| Owner of this specification | Silicon Dreamers Protocol |
+| Specification release | `2.0.0` |
+| Owner of this specification | AGENT-SDP404 |
 | Date | 2026-10-30 |
 | Scope | Chain-independent AI creation and seat succession |
 

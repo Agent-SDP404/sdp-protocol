@@ -1,18 +1,18 @@
-# SDP-0002: Personal agents, autonomy and developer authority
+# SDP404-0002: Agents, autonomy and developer authority
 
-Status: specification release `1.0.0`. Normative vocabulary follows [the core](SDP-0001-core.md).
+Status: specification release `2.0.0`. Normative vocabulary follows [the core](SDP404-0001-core.md).
 
-## 1. User representation
+## 1. Principal representation
 
-A personal agent represents a principal through a mandate, not through a claim that it knows the principal. Hosting, model ownership and wallet ownership are separate implementation matters. The binding MUST identify both principal and agent and allow the relevant verifier to establish the scope and current validity of their relationship.
+An agent represents a principal through a mandate, not through a claim that it can access data about the principal. Hosting, model ownership and wallet ownership are separate implementation matters. The binding MUST identify both principal and agent and allow the relevant verifier to establish the scope and current validity of their relationship.
 
-The agent can transform authorized context into a public-safe answer, creative expression, service, matching request or action. The principal need not manually specify each intermediate step when the mandate already covers it. Material expansion of purpose, disclosure, audience, cost or delegation requires additional authorization.
+The agent can transform permitted source data and context into a public-safe answer, creative expression, service, matching request or action. The principal need not manually specify each intermediate step when the mandate already covers it. Material expansion of purpose, disclosure, audience, cost or delegation requires additional authorization.
 
 ## 2. Autonomy inside a boundary
 
 The agent MAY choose reasoning steps, tools, output structure and intermediate plans within policy. It MUST NOT treat creative or operational autonomy as authority to spend without limits, disclose all memories, select a different beneficiary, grant persistent access, or continue unrelated tasks.
 
-Applications may be interactive, autonomous or mixed. A mandatory no-draft creative workflow belongs to a particular profile, not to all SDP applications. Likewise, a user may explicitly request review before disclosure or authorize automatic delivery within defined conditions.
+Applications may be interactive, autonomous or mixed. A mandatory no-draft creative workflow belongs to a particular profile, not to all AGENT-SDP404 applications. Likewise, a user may explicitly request review before disclosure or authorize automatic delivery within defined conditions.
 
 ## 3. Distinct authority classes
 
@@ -26,6 +26,7 @@ Applications may be interactive, autonomous or mixed. A mandatory no-draft creat
 | Assignment | Move a defined consumable execution entitlement | Transfer the underlying data, token, copyright or all user authority |
 | Settlement | Pay or allocate agreed benefits | Change beneficiary or accepted terms |
 | Memory | Retain specified feedback in approved storage | Absorb untrusted instructions or third-party data without permission |
+| State update | Apply an accepted result to a named system or device within bounded conditions | Arbitrary actuation, database writes or permission changes |
 
 ## 4. Developer non-sovereignty
 
@@ -43,9 +44,9 @@ AUTH-05: Actual powers to pause, censor, inspect logs, rotate keys, change polic
 
 AUTH-06: These restrictions MUST also apply when developer, agent host, verifier and settlement provider are the same organization. Combining roles increases shared trust; it does not remove the boundaries.
 
-## 5. Private-context transformation
+## 5. Source-governed transformation
 
-Agents SHOULD minimize outbound context. They MUST preserve source restrictions through tool calls and sub-agent delegation. Sending private context to a remote inference provider is itself a disclosure to that provider, even if the final output is public-safe.
+Agents SHOULD minimize outbound data according to each source policy. Public-source reuse, organizational stewardship and device control are distinct authority relationships; source access and execution authority MUST be checked separately. They MUST preserve source restrictions through tool calls and sub-agent delegation. Sending private context to a remote inference provider is itself a disclosure to that provider, even if the final output is public-safe.
 
 A conforming profile must name or describe relevant processor audiences and their retention assumptions. Local execution, confidential computing or zero-knowledge techniques may reduce exposure, but none is required or implied by the core.
 
@@ -76,4 +77,4 @@ Principals MUST have the profile's declared way to stop future use of a mandate.
 
 Applications MUST distinguish revoking future authority from cancelling accepted obligations, receiving a refund and deleting retained data. These have different conditions. No universal refund or erasure guarantee is created by this specification.
 
-See [exchange rights](SDP-0003-exchange-and-rights.md) and [security](../docs/security.md).
+See [exchange rights](SDP404-0003-exchange-rights.md) and [security](../docs/security.md).

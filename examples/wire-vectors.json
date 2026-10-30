@@ -1,0 +1,41 @@
+{
+  "format": "SDP404-JSON-1",
+  "vectors": [
+    {
+      "input": {
+        "z": 1,
+        "a": "data"
+      },
+      "canonicalAscii": "{\"a\":\"data\",\"z\":1}",
+      "sha256": "a29c108d69c5c38d39971b1a1b5f15bf49f6204d3fa0fc39c07fb2e93cef4e9f"
+    },
+    {
+      "input": {
+        "value": "\u4e16\u754c",
+        "symbol": "\ud83c\udf0d"
+      },
+      "canonicalAscii": "{\"symbol\":\"\\ud83c\\udf0d\",\"value\":\"\\u4e16\\u754c\"}",
+      "sha256": "770099368be1ef0af2d0d43b6d6a9192f80e0c0900ec863fbb28ce418a9564e6"
+    },
+    {
+      "input": {
+        "text": "line\nnext\t/\"\\",
+        "value": -42
+      },
+      "canonicalAscii": "{\"text\":\"line\\nnext\\t/\\\"\\\\\",\"value\":-42}",
+      "sha256": "8e10c782b0fc34b125083960203de2356c13c5c23ba5f1039627bab2c3c7a31c"
+    },
+    {
+      "input": {
+        "empty": null,
+        "flags": [
+          true,
+          false
+        ],
+        "items": []
+      },
+      "canonicalAscii": "{\"empty\":null,\"flags\":[true,false],\"items\":[]}",
+      "sha256": "bc9c28c798fc265a1c2e97732aac80884ca949d4508b630346058011d90bcfdd"
+    }
+  ]
+}
