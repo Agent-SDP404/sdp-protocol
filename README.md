@@ -56,6 +56,7 @@ See [Authority and AI execution](spec/SDP-0002-authority-and-ai.md).
 - **Intent matching:** preferences and constraints become a minimal request that can be matched without publishing a full personal profile.
 - **Agent-to-agent work:** one agent delegates a bounded subtask; the recipient receives only the permitted inputs and execution rights.
 - **Creative issuance:** personal context becomes a work, with an explicit publication or mint entitlement.
+- **[Agent-created tokens](cases/agent-created-token/README.md):** personal intent and community context become a token concept, an authorized creation plan and an explicit allocation of units and control.
 
 The earlier NFT, mint-entitlement and seat-succession design is preserved in [the agent-created NFT case](cases/agent-created-nft/README.md). It is one application of SDP, not the definition of the protocol.
 
