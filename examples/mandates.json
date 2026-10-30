@@ -1,0 +1,178 @@
+{
+  "notice": "Synthetic local-agent examples. Proof references are placeholders, not credentials.",
+  "mandates": [
+    {
+      "version": "sdp/0.2-draft",
+      "id": "mandate:knowledge",
+      "instance": "example:local-lab",
+      "principal": "person:alice",
+      "agent": "agent:alice",
+      "audiences": [
+        "person:bob"
+      ],
+      "purpose": "answer-approved-question",
+      "contextRefs": [
+        "context:approved-notes"
+      ],
+      "capabilityRefs": [],
+      "operations": [
+        "derive",
+        "disclose"
+      ],
+      "outputClasses": [
+        "scoped-answer"
+      ],
+      "validFrom": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-31T00:00:00Z",
+      "limits": {
+        "maxUses": 4,
+        "maxChargeMinor": 0,
+        "unit": "NONE"
+      },
+      "delegation": {
+        "allowedAgents": [],
+        "parentMandateId": null
+      },
+      "revocation": {
+        "method": "profile-defined",
+        "reference": "example:revocations"
+      },
+      "authorization": {
+        "proofRef": "example:NOT-A-SIGNATURE:mandate:knowledge"
+      }
+    },
+    {
+      "version": "sdp/0.2-draft",
+      "id": "mandate:matching",
+      "instance": "example:local-lab",
+      "principal": "person:carol",
+      "agent": "agent:carol",
+      "audiences": [
+        "service:matcher"
+      ],
+      "purpose": "find-candidates",
+      "contextRefs": [
+        "context:preferences"
+      ],
+      "capabilityRefs": [
+        "capability:match"
+      ],
+      "operations": [
+        "derive",
+        "disclose",
+        "invoke"
+      ],
+      "outputClasses": [
+        "minimal-request"
+      ],
+      "validFrom": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-31T00:00:00Z",
+      "limits": {
+        "maxUses": 4,
+        "maxChargeMinor": 0,
+        "unit": "NONE"
+      },
+      "delegation": {
+        "allowedAgents": [],
+        "parentMandateId": null
+      },
+      "revocation": {
+        "method": "profile-defined",
+        "reference": "example:revocations"
+      },
+      "authorization": {
+        "proofRef": "example:NOT-A-SIGNATURE:mandate:matching"
+      }
+    },
+    {
+      "version": "sdp/0.2-draft",
+      "id": "mandate:coordinator",
+      "instance": "example:local-lab",
+      "principal": "person:dana",
+      "agent": "agent:coordinator",
+      "audiences": [
+        "agent:worker",
+        "person:dana"
+      ],
+      "purpose": "summarize-approved-input",
+      "contextRefs": [
+        "context:task-input"
+      ],
+      "capabilityRefs": [
+        "capability:summarize"
+      ],
+      "operations": [
+        "derive",
+        "disclose",
+        "invoke",
+        "delegate"
+      ],
+      "outputClasses": [
+        "task-summary"
+      ],
+      "validFrom": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-31T00:00:00Z",
+      "limits": {
+        "maxUses": 4,
+        "maxChargeMinor": 0,
+        "unit": "NONE"
+      },
+      "delegation": {
+        "allowedAgents": [
+          "agent:worker"
+        ],
+        "parentMandateId": null
+      },
+      "revocation": {
+        "method": "profile-defined",
+        "reference": "example:revocations"
+      },
+      "authorization": {
+        "proofRef": "example:NOT-A-SIGNATURE:mandate:coordinator"
+      }
+    },
+    {
+      "version": "sdp/0.2-draft",
+      "id": "mandate:worker",
+      "instance": "example:local-lab",
+      "principal": "person:dana",
+      "agent": "agent:worker",
+      "audiences": [
+        "person:dana"
+      ],
+      "purpose": "summarize-approved-input",
+      "contextRefs": [
+        "context:task-input"
+      ],
+      "capabilityRefs": [
+        "capability:summarize"
+      ],
+      "operations": [
+        "derive",
+        "disclose",
+        "invoke"
+      ],
+      "outputClasses": [
+        "task-summary"
+      ],
+      "validFrom": "2026-10-30T00:00:00Z",
+      "expiresAt": "2026-10-31T00:00:00Z",
+      "limits": {
+        "maxUses": 2,
+        "maxChargeMinor": 0,
+        "unit": "NONE"
+      },
+      "delegation": {
+        "allowedAgents": [],
+        "parentMandateId": "mandate:coordinator"
+      },
+      "revocation": {
+        "method": "profile-defined",
+        "reference": "example:revocations"
+      },
+      "authorization": {
+        "proofRef": "example:NOT-A-SIGNATURE:mandate:worker"
+      }
+    }
+  ]
+}

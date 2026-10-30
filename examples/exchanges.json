@@ -1,0 +1,56 @@
+{
+  "notice": "Illustrative proposals; not accepted agreements, signed messages or executed transactions.",
+  "exchanges": [
+    {
+      "id": "exchange:knowledge",
+      "mandateId": "mandate:knowledge",
+      "kind": "knowledge-service",
+      "representation": "scoped-answer",
+      "counterparty": "person:bob",
+      "contextDisposition": "private; output only",
+      "resultRecipient": "person:bob",
+      "allocation": {
+        "kind": "result-only",
+        "beneficiary": "person:bob",
+        "chargeMinor": 0,
+        "unit": "NONE"
+      },
+      "feedback": "disabled",
+      "evidence": "synthetic; no execution"
+    },
+    {
+      "id": "exchange:matching",
+      "mandateId": "mandate:matching",
+      "kind": "intent-matching",
+      "representation": "minimal-request",
+      "counterparty": "service:matcher",
+      "contextDisposition": "private; selected constraints only",
+      "resultRecipient": "person:carol",
+      "allocation": {
+        "kind": "candidate-results",
+        "beneficiary": "person:carol",
+        "chargeMinor": 0,
+        "unit": "NONE"
+      },
+      "feedback": "disabled",
+      "evidence": "synthetic; no execution"
+    },
+    {
+      "id": "exchange:collaboration",
+      "mandateId": "mandate:worker",
+      "kind": "agent-collaboration",
+      "representation": "task-summary",
+      "counterparty": "person:dana",
+      "contextDisposition": "approved task input only",
+      "resultRecipient": "person:dana",
+      "allocation": {
+        "kind": "task-result",
+        "beneficiary": "person:dana",
+        "chargeMinor": 0,
+        "unit": "NONE"
+      },
+      "feedback": "disabled",
+      "evidence": "synthetic; no execution"
+    }
+  ]
+}

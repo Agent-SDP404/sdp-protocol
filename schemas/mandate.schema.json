@@ -1,0 +1,194 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "urn:sdp:draft:0.2:mandate",
+  "title": "SDP illustrative mandate envelope",
+  "description": "Structural example only. Proof references are not verified by this schema.",
+  "type": "object",
+  "required": [
+    "version",
+    "id",
+    "instance",
+    "principal",
+    "agent",
+    "audiences",
+    "purpose",
+    "contextRefs",
+    "capabilityRefs",
+    "operations",
+    "outputClasses",
+    "validFrom",
+    "expiresAt",
+    "limits",
+    "delegation",
+    "revocation",
+    "authorization"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "version": {
+      "type": "string",
+      "enum": [
+        "sdp/0.2-draft"
+      ]
+    },
+    "id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "instance": {
+      "type": "string",
+      "minLength": 1
+    },
+    "principal": {
+      "type": "string",
+      "minLength": 1
+    },
+    "agent": {
+      "type": "string",
+      "minLength": 1
+    },
+    "audiences": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "purpose": {
+      "type": "string",
+      "minLength": 1
+    },
+    "contextRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "capabilityRefs": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true
+    },
+    "operations": {
+      "type": "array",
+      "minItems": 1,
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "enum": [
+          "derive",
+          "disclose",
+          "invoke",
+          "delegate",
+          "assign",
+          "settle",
+          "remember"
+        ]
+      }
+    },
+    "outputClasses": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      },
+      "uniqueItems": true,
+      "minItems": 1
+    },
+    "validFrom": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "expiresAt": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "limits": {
+      "type": "object",
+      "required": [
+        "maxUses",
+        "maxChargeMinor",
+        "unit"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "maxUses": {
+          "type": "integer",
+          "minimum": 1
+        },
+        "maxChargeMinor": {
+          "type": "integer",
+          "minimum": 0
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "delegation": {
+      "type": "object",
+      "required": [
+        "allowedAgents",
+        "parentMandateId"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "allowedAgents": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "minLength": 1
+          },
+          "uniqueItems": true
+        },
+        "parentMandateId": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "revocation": {
+      "type": "object",
+      "required": [
+        "method",
+        "reference"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "method": {
+          "type": "string",
+          "enum": [
+            "profile-defined"
+          ]
+        },
+        "reference": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "authorization": {
+      "type": "object",
+      "required": [
+        "proofRef"
+      ],
+      "additionalProperties": false,
+      "properties": {
+        "proofRef": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    }
+  }
+}
