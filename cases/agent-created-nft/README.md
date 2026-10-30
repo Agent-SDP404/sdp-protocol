@@ -1,10 +1,10 @@
-> This is one application of AGENT-SDP404: personal context becomes an agent-created artifact, and scoped creation/mint authority can pass to another participant. This profile does not define the general protocol.
+> This is one application of agent-sdp: personal context becomes an agent-created artifact, and scoped creation/mint authority can pass to another participant. This profile does not define the general protocol.
 
 # Application case: agent-created NFTs and seat succession
 
-**An AGENT-SDP404 application profile for agent-created artifacts, transferable creation-and-mint entitlements, and persistent-seat succession.**
+**An agent-sdp application profile for agent-created artifacts, transferable creation-and-mint entitlements, and persistent-seat succession.**
 
-**Status:** application case in AGENT-SDP404 `2.0.0` · **Language:** English · [General AGENT-SDP404 core](../../README.md)
+**Status:** application case in agent-sdp `3.0.0` · **Language:** English · [General agent-sdp core](../../README.md)
 
 An AI application can turn what an agent understands about a participant into an original artifact. This application profile describes how the participant authorizes that work, how the agent commits its result, how the result becomes a verifiable tokenized work, and how a subsequent participant receives the right to create and mint a new work in the same persistent seat.
 
@@ -14,7 +14,7 @@ The founding design adds a separation of authority: developers provide rules and
 
 ## Run the case
 
-Run `python -m agent_sdp404.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:nft-genesis` and `exchange:nft-successor` in [the signed proof bundle](../../examples/traces/local-exchange.json).
+Run `python -m agent_sdp.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:nft-genesis` and `exchange:nft-successor` in [the signed proof bundle](../../examples/traces/local-exchange.json).
 
 The local fixture creates a first artifact, then a successor using different input data and a different principal. The predecessor owner must also sign the successor agreement. The old record remains owned by its original owner and becomes retired; the successor has a new identity in the same seat.
 
@@ -93,7 +93,7 @@ seat:S
 
 ## Mapping to the general protocol
 
-| General AGENT-SDP404 object | This application |
+| General agent-sdp object | This application |
 |---|---|
 | Principal | Participant controlling a wallet |
 | Context | Privately accessible history, preferences and memories |
@@ -106,6 +106,6 @@ seat:S
 
 ## Status and boundaries
 
-This application inspired the first draft. Its public workflow is described at [Silicon Dreamers](https://silicondreamers.com/). The website is a mutable application source, not the generic AGENT-SDP404 standard. This profile is a design abstraction and not an audit or confirmation of current deployment behavior. No live address, price or supply cap is pinned here.
+This application inspired the first draft. Its public workflow is described at [Silicon Dreamers](https://silicondreamers.com/). The website is a mutable application source, not the generic agent-sdp standard. This profile is a design abstraction and not an audit or confirmation of current deployment behavior. No live address, price or supply cap is pinned here.
 
 Market-mediated regeneration is a possible separate adapter. Its settlement and rights must be specified before implementation; the current credential route must not be presented as a generic NFT transfer or an already-live marketplace.

@@ -1,10 +1,10 @@
-# SDP404-0003: Exchange, rights and value allocation
+# SDP-0003: Exchange, rights and value allocation
 
-Status: specification release `2.0.0`. Normative terms follow [the core](SDP404-0001-core.md).
+Status: specification release `3.0.0`. Normative terms follow [the core](SDP-0001-core.md).
 
 ## 1. What can be exchanged
 
-An AGENT-SDP404 exchange may deliver information, a derived result, access to a capability, an executed action, a scoped entitlement or a collaboration outcome. Compensation is optional. The agreement MUST describe the actual thing provided and the rights granted, rather than treating all exchanges as ownership transfers.
+An agent-sdp exchange may deliver information, a derived result, access to a capability, an executed action, a scoped entitlement or a collaboration outcome. Compensation is optional. The agreement MUST describe the actual thing provided and the rights granted, rather than treating all exchanges as ownership transfers.
 
 The source context, derived representation, execution authority and economic benefit are separate. Acquiring one MUST NOT silently grant the others.
 
@@ -45,7 +45,7 @@ Before acceptance, an agreement MUST identify result recipients and any payment,
 
 The developer MAY receive an agreed service fee. It MUST NOT introduce one after acceptance without additional authorization, or redirect a participant's result or compensation through an administrative override.
 
-Allocations can be asymmetric. A free answer can be a valid exchange, and a collaboration can provide reciprocal results without money. AGENT-SDP404 does not assume that each party owns all inputs, that every output is scarce, or that all value can be priced.
+Allocations can be asymmetric. A free answer can be a valid exchange, and a collaboration can provide reciprocal results without money. agent-sdp does not assume that each party owns all inputs, that every output is scarce, or that all value can be priced.
 
 ## 6. Evidence, disputes and failure
 
@@ -63,4 +63,4 @@ The profile MUST state how unused reservations are released and how accepted obl
 - A specialist's agent derives an answer from approved notes. The recipient can use the answer for one specified task but receives no access to the notes.
 - A personal agent publishes a constrained request. A matching agent returns candidates; it receives no authority to purchase or publish the requester's identity.
 - A coordinator delegates one analysis step to a worker. The worker consumes the parent's allowance and cannot independently subdelegate unless authorized.
-- In the [NFT case](../cases/agent-created-nft/README.md), the new participant receives a successor creation-and-mint entitlement. This is an application-specific linked right, not a requirement that all AGENT-SDP404 exchanges create tokens.
+- In the [NFT case](../cases/agent-created-nft/README.md), the new participant receives a successor creation-and-mint entitlement. This is an application-specific linked right, not a requirement that all agent-sdp exchanges create tokens.

@@ -1,6 +1,6 @@
 # License and rights
 
-Copyright notices are retained in [NOTICE](NOTICE), including the original Silicon Dreamers Protocol attribution and the current AGENT-SDP404 name.
+Copyright notices are retained in [NOTICE](NOTICE), including the original Silicon Dreamers Protocol attribution and the current agent-sdp name.
 
 The original specification, documentation, examples, schemas and tools in this repository are licensed under the Apache License, Version 2.0. You may use these materials in accordance with [LICENSE](LICENSE). Attribution notices appear in [NOTICE](NOTICE).
 
@@ -8,4 +8,4 @@ This repository license does not grant access to private user context, credentia
 
 The license applies to the repository materials. Protocol permissions such as invocation, delegation, assignment and settlement describe application behavior; they do not replace the software license or automatically assign a participant's rights in their data or outputs.
 
-Repository: [Agent-SDP404/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol).
+Repository: [agent-sdp/sdp-protocol](https://github.com/Agent-SDP404/sdp-protocol).

@@ -6,7 +6,7 @@ import json
 from cryptography.exceptions import InvalidSignature
 from cryptography.hazmat.primitives.asymmetric.ed25519 import Ed25519PrivateKey
 
-DOMAIN = b"AGENT-SDP404/2.0/SDP404-JSON-1\x00"
+DOMAIN = b"agent-sdp/3.0/SDP-JSON-1\x00"
 
 
 class ProtocolError(ValueError):
@@ -23,7 +23,7 @@ def check(condition, code):
 def canonical(value):
     """Restricted JSON: integer-only numbers, sorted ASCII property names.
 
-    Unicode values are escaped with ensure_ascii. This is SDP404-JSON-1, NOT JCS.
+    Unicode values are escaped with ensure_ascii. This is SDP-JSON-1, NOT JCS.
     Floats, lone surrogates, non-ASCII field names and integers > 2**53-1 fail.
     """
     def walk(item):

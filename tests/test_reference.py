@@ -3,10 +3,10 @@ import unittest
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 
-from agent_sdp404.crypto import ProtocolError, canonical, digest, parse
-from agent_sdp404.engine import Engine, VERSION, verify_delivery
-from agent_sdp404.fixtures import NOW, World
-from agent_sdp404.verify_trace import verify_trace
+from agent_sdp.crypto import ProtocolError, canonical, digest, parse
+from agent_sdp.engine import Engine, VERSION, verify_delivery
+from agent_sdp.fixtures import NOW, World
+from agent_sdp.verify_trace import verify_trace
 
 
 class ReferenceTests(unittest.TestCase):
@@ -64,7 +64,7 @@ class ReferenceTests(unittest.TestCase):
 
     def test_wire_schema_is_valid(self):
         from jsonschema import Draft202012Validator
-        schema = parse((Path(__file__).parents[1] / "agent_sdp404/schemas/wire.schema.json").read_text(encoding="utf-8"))
+        schema = parse((Path(__file__).parents[1] / "agent_sdp/schemas/wire.schema.json").read_text(encoding="utf-8"))
         Draft202012Validator.check_schema(schema)
 
     def test_delivered_readback_after_revocation_and_expiry(self):

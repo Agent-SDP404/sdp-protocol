@@ -1,22 +1,22 @@
 {
-  "profile": "agent-sdp404/local-1",
+  "profile": "agent-sdp/local-1",
   "dataNotice": "All source data is synthetic. Asset adapters are local simulations; signatures and SQLite transactions are real.",
   "clock": 1793361600,
   "publicKeys": {
-    "org:publisher": "XuHURHwFukAUkh/ajp4bob6Imw8maidqA+9DAxcqJsM=",
-    "org:incoming": "RbDTbeEf8sRfDRCePsfpm05gODPkUFzLX+p82p7m164=",
-    "org:receiver": "Jvo2bgg/Mj9P9TA8PaAa3ind1E++GCeAin8YsBkq03g=",
-    "org:source": "C1oLTzMgsfKmb3l2paXEhBZHYO9vQoB9Il37ZXrMwog=",
-    "agent:maker": "JpNFjZ3xpxIlbKcxvVWfLPzMU2LEvGS/+D1Wcsq5rQM=",
-    "agent:successor": "TkfSzkO4mKAQxiMiMeCNnE7nYUNxTbfzEQS9Nn+oBQ4=",
-    "operator:local": "IjTWSG545x4vrMSLIhnCW5qNA/O6s9pc2EOdLcDPojk="
+    "org:publisher": "vBO8b8tPcfNBj8AZDVhsW4LPyCzl/koNbMDj6pQi3dE=",
+    "org:incoming": "yCaQ770AHTsSLHIsEojuVgx5p3IA8WWwkn+k/izlvE0=",
+    "org:receiver": "57tgqVTouJfU9G6JxCpA7OkTg1CL1+qXw9KFTIQAgHM=",
+    "org:source": "QLxXZ71NlURcN5WsCYgJnHsiGZM9T1q50LSLZARu+Dg=",
+    "agent:maker": "WGVhoLBneQG8GMmOEdYk/DujLqmhxy4NAItu1zLFBSE=",
+    "agent:successor": "tG2DwUU+soUbt5agcMyIyPDVHhGFE1lAaRl3FWAmXhI=",
+    "operator:local": "wE590cwfmWF2MUQrSAmvcDLq4hBFjMNu1I4VOUzhXHY="
   },
   "exchanges": [
     {
       "input": {
         "grant": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "mandate",
             "grantId": "grant:research",
@@ -44,18 +44,18 @@
           "signatures": [
             {
               "signer": "org:publisher",
-              "signature": "or5UUM5/rTkwNksIlhoUdsAmDRKus2RWfVHIz5QRp99wBAAVYTtc2FEzklrdCQcBr4ffnuTHSYKPju4MRKRjDw=="
+              "signature": "5SBifKYLa3tWQ9+m7DRqNyAtQOcsuxpN1OTmaGb97PUfePCO7XJJnaXl8gqwgOFk1zttgiG6zzG+rsFomJoaBQ=="
             }
           ]
         },
         "agreement": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "agreement",
             "exchangeId": "exchange:research",
             "grantId": "grant:research",
-            "grantHash": "d54d8c876e56e0126d161918d389304a20f7da9718e55d6ba539d3dc5518bfb9",
+            "grantHash": "f501edb6069d59547e1ddd80d3b27f8473939616d8c1182e52d2de383734952e",
             "principal": "org:publisher",
             "agent": "agent:maker",
             "recipient": "org:receiver",
@@ -64,7 +64,7 @@
             "sources": [
               {
                 "sourceId": "source:research",
-                "descriptorHash": "dadef8f3e6cd251bca4476f7e5a09de85a913bf235b7a0f7edaf86e176049341"
+                "descriptorHash": "c7ee30ca4929ceebfd71b03671845971305bd36d0775ab80b27d2ef7275a89d9"
               }
             ],
             "plan": {
@@ -78,22 +78,22 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "k/T6mmjFOnGrqOuyiEPnMrGoSJvhmRJZElnp+DXxw1UKD5sQS9wge44V0L03Tx7sqcx3XAPwSKozxl4hpYUrAw=="
+              "signature": "Z9atgsrAgzrOwaUPo7taOnzEN7zCKt75Hc8nrpQrmQbu1EZKfDzvPGFZHlDMxBjfWYKNCtMViffgRANOE28CDQ=="
             },
             {
               "signer": "org:publisher",
-              "signature": "vAYKjREwvvQY4MVFJ+ASYX4McndOZYCIvfrMftZbhGAHkmbsGyDuXAUmBE8Nud5uW9Hd+4rxeqcgp/M7aMUwCw=="
+              "signature": "0Xy/STtbVLLKJFrourKymAhvDhqsmFAtbcrO2PMBPwjeX+zTiSD9JcjK4whymxa3pt6lVwHVXJzirNSqgxghAw=="
             },
             {
               "signer": "org:receiver",
-              "signature": "xe1qNSOPnto+T8IlVxTkUXuoh+k2AB+AV2luJvWzAAET4CgTk9aLN62CgL+3qiMwRNDonQQfuPfQQQyq+1mHDQ=="
+              "signature": "FNJYo20Z1/PN5QQntEOUiPvsmH2mILUwaCp6+f/aoyY1B5n5hHStLnEJybgQXeBw+mfW8Gw0Ex6mCL1r+GVLBg=="
             }
           ]
         },
         "sources": [
           {
             "body": {
-              "version": "agent-sdp404/2.0",
+              "version": "agent-sdp/3.0",
               "domain": "local:demo",
               "type": "source",
               "sourceId": "source:research",
@@ -119,7 +119,7 @@
             "signatures": [
               {
                 "signer": "org:source",
-                "signature": "FNox7WhYzDvPwwc7hNqu+liYn2UQI8Xdporfnp+Wyjvo5BC5xWMIA7+oZ4ZoDnOPa20SHl1Uxa5YG/LF09DkAg=="
+                "signature": "BnMVjMSoHyyyyFc1IOL+loOfu61wl6tP47Hcr5FMJFf5Yce+WVbqlhN7J5ffVm5SiRm+BjR0C0tEX2/ys3x+CA=="
               }
             ]
           }
@@ -137,11 +137,11 @@
       "output": {
         "result": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "result",
             "exchangeId": "exchange:research",
-            "agreementHash": "33f7910c084d314bcf8e30d968d1a7c0d6949cf50c1b0e1e554d02db96b05ebb",
+            "agreementHash": "0dfaeb07ba83bd83d42ecd0c8de4a821d7513116e66424ec44ab7e38b8cc7813",
             "outputHash": "7313c2f8aa94f9a46260096c90ccb6c94990d2b609641449ce0e9cad2861c923",
             "output": {
               "kind": "data-summary",
@@ -153,23 +153,23 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "Q1/Gqko6AHKpNbC5u8cXVsQYP8RAcIjSf9BqGIt+CaJOm3iR8pW4AdY1dRNOcZ/A3s3MfdJYo1/hFqCCxTJIAw=="
+              "signature": "xASbteLXh1BcaXMx9ohrTa6q9+7KdAbwhU3SAWkUBpl7HaC7MXFc0E5ObBnZdrP1h4UO8JAlzbnsDv69Vf1oAw=="
             }
           ]
         },
         "receipt": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "receipt",
             "exchangeId": "exchange:research",
-            "agreementHash": "33f7910c084d314bcf8e30d968d1a7c0d6949cf50c1b0e1e554d02db96b05ebb",
-            "grantHash": "d54d8c876e56e0126d161918d389304a20f7da9718e55d6ba539d3dc5518bfb9",
+            "agreementHash": "0dfaeb07ba83bd83d42ecd0c8de4a821d7513116e66424ec44ab7e38b8cc7813",
+            "grantHash": "f501edb6069d59547e1ddd80d3b27f8473939616d8c1182e52d2de383734952e",
             "principal": "org:publisher",
             "agent": "agent:maker",
             "recipient": "org:receiver",
             "outputHash": "7313c2f8aa94f9a46260096c90ccb6c94990d2b609641449ce0e9cad2861c923",
-            "resultHash": "dbdb667a44ca29915165889506d8bce0241f64b8db040b48d945197a7a0d0721",
+            "resultHash": "b9ce9b1b286650eb14f7b85b050b53d599d5e80ba8bef0f45fbf2993ea88af8d",
             "status": "DELIVERED",
             "allocation": {
               "beneficiary": "org:receiver",
@@ -182,24 +182,24 @@
           "signatures": [
             {
               "signer": "operator:local",
-              "signature": "RW5n8vwh1dlE7FeUAuFXSVQ+fNvgVa8mJuabhFNyl+DqsvZotAX6ZUH34F+HWB2eRT7uyfJ/gxtwueylqWOCBw=="
+              "signature": "zTC9HGrJS0MeryS0q3KNqwyO4eqIrD8YPEK7887KfXIgXHsNL7eE33Vkgb1AuohlfkdFwiOCwibrLsRrFQ9FBA=="
             }
           ]
         }
       },
       "acknowledgement": {
         "body": {
-          "version": "agent-sdp404/2.0",
+          "version": "agent-sdp/3.0",
           "domain": "local:demo",
           "type": "acknowledgement",
           "exchangeId": "exchange:research",
-          "receiptHash": "09e39d2629a867d7784848a5bfa3145d005c204578e8eeb057b9646ecbe2dc5d",
+          "receiptHash": "730086c262e6f774ca7201e3cb730125d95855ea352d944489a9ccd34ab55b71",
           "recipient": "org:receiver"
         },
         "signatures": [
           {
             "signer": "org:receiver",
-            "signature": "mMWJ9Y+4VcNxyX/myMDYJ8HJMLtc96mNbyRoCK1FR5kZpb9G8LFtI9V2jIe4iO0lWBdlgik8L4/PMguQZV2BDA=="
+            "signature": "iLjbjX6wsx4HN8qeQJB1XSnGUEKXzSKJv42QB9GanQJ/DcZCdYZWMXbOUQIW2JfnEzoem/mYo3IliMZDTxrJAw=="
           }
         ]
       }
@@ -208,7 +208,7 @@
       "input": {
         "grant": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "mandate",
             "grantId": "grant:token",
@@ -236,18 +236,18 @@
           "signatures": [
             {
               "signer": "org:publisher",
-              "signature": "cFUztsv9Ub9K5d0uwO3beXdYCwLmSxmaI/nsPvPr4H460LQgoHS1hwHfIQEJ5+R1/Zy6atG7ZFsoskFuTTHJDA=="
+              "signature": "Ae5HTEdW7M4d4dpZ7thPy7LdjDGUD9GJ+V6AXOOBvDNp2k8Tk3YRo7r2iABjwAGZ442EeoxLSqNr7jF4Io1mBg=="
             }
           ]
         },
         "agreement": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "agreement",
             "exchangeId": "exchange:token",
             "grantId": "grant:token",
-            "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+            "grantHash": "98b2eeead0f82180e6518177ca62df329e81a92a5c905cc66283c0446ca4ec05",
             "principal": "org:publisher",
             "agent": "agent:successor",
             "recipient": "org:receiver",
@@ -256,7 +256,7 @@
             "sources": [
               {
                 "sourceId": "source:token",
-                "descriptorHash": "b5d57ad640e116253ff24d5e452af7d7217c7f4677ac5876635e808f6b7ae050"
+                "descriptorHash": "20cfa0a4c0d195ccdc90b3a5d39e430e236c16aca16923e481b619ee90da8e1b"
               }
             ],
             "plan": {
@@ -272,27 +272,27 @@
             },
             "nonce": "nonce:token",
             "expiresAt": 1793362200,
-            "assignmentHash": "2c1777ea32885f62b1c1cfaefd26360ab87d921fadb306ff7dbad77d3751571a"
+            "assignmentHash": "8f87477443280cf9f3d20dee4deff4e28a106d65173681e7c109fc6f2a12e043"
           },
           "signatures": [
             {
               "signer": "agent:successor",
-              "signature": "G9GFaxNV3RCd2IF7E96qjak+512Cg/HZKEs1iWcRHZE5o2UT8WxTfI8ffMEcBAybegxJgGArBcUb3BuuVBcWAg=="
+              "signature": "0mgATnP1POiOyqn77clVj4O+VTTqLYD1X7gAcQ1cXkwBlwBSCoFEdkonSNvRR6BUICpHoINigcvXwNW4cvwoDw=="
             },
             {
               "signer": "org:publisher",
-              "signature": "KLf35l7hsYRXR5gVFKscx8a+sjbFLazCzrD7P9lzuwO+0qnsQhzHPNuZo70LRAoKEB1VzZf9HOAJjWi3/H4VBw=="
+              "signature": "F5B9vIZLb9PR4O64Vf0RjWc8H17CFI0EB+zjjy0lxr985FV+ehh1SRC2ZMX1get3mRlnJe5a08LkISo1Ua9aDw=="
             },
             {
               "signer": "org:receiver",
-              "signature": "ethFfTQkp5CekygblBxSihqBLZ81yFJJlZFWQZ/XPzkzWNfLzk7U3wvTOXNrIXf7A3pwNmDOp7lUMG+/FMIRDA=="
+              "signature": "YEqnt/JJR9D2nBS/wfZMScmjMySrcNON98/dz0y6iSx7f8FvJF5j3U+wmNSj41XZCrJ0GpDqwPYOK2TCm4JeBQ=="
             }
           ]
         },
         "sources": [
           {
             "body": {
-              "version": "agent-sdp404/2.0",
+              "version": "agent-sdp/3.0",
               "domain": "local:demo",
               "type": "source",
               "sourceId": "source:token",
@@ -318,7 +318,7 @@
             "signatures": [
               {
                 "signer": "org:source",
-                "signature": "p401cSsQ15Yk8jIlhNF/7EF5AlUtDwR8bXqPBIKjQcnjiJ5jpka0yKUNUPvoV1Oacd5xFTulVzMv2MDfiwU3Dw=="
+                "signature": "co+uftlm3CaDPn5hU4Dd9BUEyg6J9twdErInUu0jRseItMtcg/9tYGbcROa67D1W6Mfn191lUuv3CvP71+DiDg=="
               }
             ]
           }
@@ -333,15 +333,15 @@
       "output": {
         "result": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "result",
             "exchangeId": "exchange:token",
-            "agreementHash": "fdc74536f135c988c90e9144fa85d4d5134815af81f32bca56b96f2a623a809e",
-            "outputHash": "d250d7f2b95079f0ac1d38265da67958b6834cf10226ac2097ef91ad280cee18",
+            "agreementHash": "6e38d4702424487d11c9bbc6586a2ef94313ebc62b7d833d03fe16b09d4b4053",
+            "outputHash": "1220f0c3e7251c25e3d30d9fff8801314b6859ac47dbd2d851b1219e09134311",
             "output": {
               "kind": "token-create",
-              "assetId": "simulated:token-create:fdc74536f135c988c90e9144",
+              "assetId": "simulated:token-create:6e38d4702424487d11c9bbc6",
               "simulation": true,
               "plan": {
                 "kind": "token-create",
@@ -360,23 +360,23 @@
           "signatures": [
             {
               "signer": "agent:successor",
-              "signature": "I8YAeBXMjx7dmUfMoomygf290rRK1H1OZQsN7g9hxpUHtQdacpcSzVcPLJWkkGTy9qcWFOykTNoLvz1iVi1bCA=="
+              "signature": "GR8deTjMzF5Acjlt4UInk1JQjvI5+44WeoIPHIKm8MuyTpiPqEu6KL5h3rIiigGFLVnKW4v7ErtJXSlBQsCpAg=="
             }
           ]
         },
         "receipt": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "receipt",
             "exchangeId": "exchange:token",
-            "agreementHash": "fdc74536f135c988c90e9144fa85d4d5134815af81f32bca56b96f2a623a809e",
-            "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+            "agreementHash": "6e38d4702424487d11c9bbc6586a2ef94313ebc62b7d833d03fe16b09d4b4053",
+            "grantHash": "98b2eeead0f82180e6518177ca62df329e81a92a5c905cc66283c0446ca4ec05",
             "principal": "org:publisher",
             "agent": "agent:successor",
             "recipient": "org:receiver",
-            "outputHash": "d250d7f2b95079f0ac1d38265da67958b6834cf10226ac2097ef91ad280cee18",
-            "resultHash": "55c69fc811c2b26c82bcf30ee744d96a7ead38832954e537b595f91857f81cf6",
+            "outputHash": "1220f0c3e7251c25e3d30d9fff8801314b6859ac47dbd2d851b1219e09134311",
+            "resultHash": "4bd943f7e3d0df644bed832bec87731a94deff5c15c5427e0cc0b0fec6501b15",
             "status": "DELIVERED",
             "allocation": {
               "beneficiary": "org:receiver",
@@ -384,39 +384,39 @@
               "unit": "NONE"
             },
             "sequence": 2,
-            "previousReceiptHash": "09e39d2629a867d7784848a5bfa3145d005c204578e8eeb057b9646ecbe2dc5d"
+            "previousReceiptHash": "730086c262e6f774ca7201e3cb730125d95855ea352d944489a9ccd34ab55b71"
           },
           "signatures": [
             {
               "signer": "operator:local",
-              "signature": "LpCYz3B2kC2pv2YwOJy1/iQ+WOkITjUzjcScYmduhhBJFquu7nuN7PdAI5pihy56u7RYXUdBFns1eOLeyHpfCQ=="
+              "signature": "1TmIaHJD+H/oCQfIk4lu7D92rMnEnsv7y9OMe5gI1coo0KTAWEstTk83gtQkYPiyxdcTbpBI2PX1LQFBpEGQCw=="
             }
           ]
         }
       },
       "acknowledgement": {
         "body": {
-          "version": "agent-sdp404/2.0",
+          "version": "agent-sdp/3.0",
           "domain": "local:demo",
           "type": "acknowledgement",
           "exchangeId": "exchange:token",
-          "receiptHash": "357eabec126817f49fb7a9b0c21baad638b14d379df37fa019151cefff2fa669",
+          "receiptHash": "6d77ad180408acbf404ad3cd25fd84da3ccfc0b701b6a5f5e4ce0ff343942924",
           "recipient": "org:receiver"
         },
         "signatures": [
           {
             "signer": "org:receiver",
-            "signature": "WUmdh69To9GiGZVeok+S0H9GEx0tZlZtGJbRs034E7k4klFidnBIxRuCQ4ykpz58fUIAbI8CgUgBLRXRO7NXBA=="
+            "signature": "1KQZZOAQ2hVuyzAkm8blwSSCCICWkcWkgnrvQU+i5Qck5v8NR36heL/FJX4JK30//NhY0fA1aqiDgZ8BNj8+Bg=="
           }
         ]
       },
       "assignment": {
         "body": {
-          "version": "agent-sdp404/2.0",
+          "version": "agent-sdp/3.0",
           "domain": "local:demo",
           "type": "assignment",
           "grantId": "grant:token",
-          "grantHash": "0bb0d99ce16a3bb132a25221e147a2284c831443e65044fd53ff1fbc5677c41c",
+          "grantHash": "98b2eeead0f82180e6518177ca62df329e81a92a5c905cc66283c0446ca4ec05",
           "fromAgent": "agent:maker",
           "toAgent": "agent:successor",
           "epoch": 0,
@@ -426,15 +426,15 @@
         "signatures": [
           {
             "signer": "agent:maker",
-            "signature": "NBI2TO37E9+3rF6PwiEvjbpXL3GU0nWvxipWcKfvmzDSRKq1SA5jEmDH6RYsGUlDYSERNwX5dhvQZ2g80zg2CA=="
+            "signature": "hu0cJCaozIFuZyJxyamFsPmQcM+skJSl9u2ixyav93Sky06lKtaDxew205JwiJ6+WHI3ticJfXduzC+URyI4BQ=="
           },
           {
             "signer": "agent:successor",
-            "signature": "eGO1gjO1dtFbW6XAsaPgqBk0SJKlgAvFlvzOOOXAiKJr+twIrRCl+rKTSsFjQGx05Y9+SGiOwc7Q1RcZSQJDBA=="
+            "signature": "60o4Ai3iEcEhqi3W1SbwRFLjwon8QnZIqBZMhqbC6Q66dJF3JGO+6rsA9sChtdGY5/sTUSSNmsrCfgAE/xBVAg=="
           },
           {
             "signer": "org:publisher",
-            "signature": "0xaTtPtOqrltdP30pcHQUnelcbhTQmTbiL3ONjQVba3hpROvpnRv5slWC55tGBKvhp0FWqlIHinpugobj6HzBw=="
+            "signature": "/Pbq1lXKoQSM2/S0yDWJU8d/2wVXnvp/9sIBZZShO3CVVGUpq1atGdpoUyg5Kv/fLsssXpFo1YyirFSl47/YBQ=="
           }
         ]
       }
@@ -443,7 +443,7 @@
       "input": {
         "grant": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "mandate",
             "grantId": "grant:nft-genesis",
@@ -471,18 +471,18 @@
           "signatures": [
             {
               "signer": "org:publisher",
-              "signature": "LQK1vLDKgCEz4j9C/zs5R+B96E9TSFV62AABvZ5Tgyp2jPzXqp5cEtasmh+rAsywUcx/LVGqqGCsTffimPPFDw=="
+              "signature": "A5E6g7rqyyHRJryUpa/liD/8DLsaLtxcOZuU8e7DPXHdfu91MfpbZF0qGlA+Mzu3clZrdZxgENpINRorAUsvAQ=="
             }
           ]
         },
         "agreement": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "agreement",
             "exchangeId": "exchange:nft-genesis",
             "grantId": "grant:nft-genesis",
-            "grantHash": "752f3dce2451eb0953af312b638bc88b562ccb831c253f0c3c2c0aee49aba810",
+            "grantHash": "eacdaf65c728f201af7010286b33cabf9c5a79369a5ecfd3470689860b990631",
             "principal": "org:publisher",
             "agent": "agent:maker",
             "recipient": "org:publisher",
@@ -491,7 +491,7 @@
             "sources": [
               {
                 "sourceId": "source:nft-genesis",
-                "descriptorHash": "c18e8870b6a4d66dde3792babd55e22d0a091f47c3e2392e71f940e0596c316a"
+                "descriptorHash": "5341475f48910e4c6b5c3c1492a8a669c04914b3f07af0eb5154e758b4593dd1"
               }
             ],
             "plan": {
@@ -507,18 +507,18 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "AM0KZLA7kY0Z5XEQqw4XEmsXB7wZsJI6v8+62i6RYohSiTvxK/hjnf3zRZJe5VZgGLSgAgFKtJiWjQCrThUuAA=="
+              "signature": "g/LfuP6FOZXwcMCISwstEHtU5ArLl3ckl1Hnhyw2ofcg98Yj14VcVRi0S+H089HxTUtFLZMphjLtj4OMsiATCw=="
             },
             {
               "signer": "org:publisher",
-              "signature": "dZKiOqzpZuxqKykHJ0vqmE6XwZapG9LlJPqGu178Pu2xOG0cfvFm7mlBg+SWg/WLNMlj1ABf2ivSoaHoeEbwAA=="
+              "signature": "kbgVoxYMdGZyLJs7hh01HzLHG1GKUwmALTsenr69ksC+0i+z7IBJ9p7Fuy8c0gW43rKTo9EgQw+2rTOCd8PcDw=="
             }
           ]
         },
         "sources": [
           {
             "body": {
-              "version": "agent-sdp404/2.0",
+              "version": "agent-sdp/3.0",
               "domain": "local:demo",
               "type": "source",
               "sourceId": "source:nft-genesis",
@@ -544,7 +544,7 @@
             "signatures": [
               {
                 "signer": "org:source",
-                "signature": "EGH16HoWKHEOoZCiC8fBR9NGn5kbNJewwErwMtNA/ou5vKsxt8Tekjas5mfF17g5x5kNw/oAE0ziAXuvGixdBQ=="
+                "signature": "nHBdsbdPSyBD38WEH/AFE6xbWzM62CpSPuRN14VH53ApI5mQTOkrOiibK7YL3io3BUxbSUqow7GdSlnP7GTDBw=="
               }
             ]
           }
@@ -558,15 +558,15 @@
       "output": {
         "result": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "result",
             "exchangeId": "exchange:nft-genesis",
-            "agreementHash": "a48026f265a05bc52549efc9dd28e5527e1c19ed8a1dfc8671f92f4bd636fcd8",
-            "outputHash": "991f6f07a378c0f925ff06d4e11cd4fb5c15792318120215fc74c405036d6cea",
+            "agreementHash": "3fb7db0e7d715d5d0f1945e2942f4738d175d28b367699501024978a3b806f5e",
+            "outputHash": "99f8e068fa4ac7161d44361b11178b5f73ae3eec47ba1efa086838d3b930ed14",
             "output": {
               "kind": "nft-create",
-              "assetId": "simulated:nft-create:a48026f265a05bc52549efc9",
+              "assetId": "simulated:nft-create:3fb7db0e7d715d5d0f1945e2",
               "simulation": true,
               "plan": {
                 "kind": "nft-create",
@@ -580,23 +580,23 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "GlATi7mnSiRBwfIr1e71PtQNGtzLtWDzwGPto11oTYanpxfEjOFES4sS8PUnMllk9W0ALnWg0fv/WA1YwHvBDw=="
+              "signature": "85oGuyxkq/ud+JYoVAhpdYbmDUSO6GOKjmH8i9ag5ie7y+h3ATdwUWohl7NKcvaE87nDuje/fii3iff6O7azBw=="
             }
           ]
         },
         "receipt": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "receipt",
             "exchangeId": "exchange:nft-genesis",
-            "agreementHash": "a48026f265a05bc52549efc9dd28e5527e1c19ed8a1dfc8671f92f4bd636fcd8",
-            "grantHash": "752f3dce2451eb0953af312b638bc88b562ccb831c253f0c3c2c0aee49aba810",
+            "agreementHash": "3fb7db0e7d715d5d0f1945e2942f4738d175d28b367699501024978a3b806f5e",
+            "grantHash": "eacdaf65c728f201af7010286b33cabf9c5a79369a5ecfd3470689860b990631",
             "principal": "org:publisher",
             "agent": "agent:maker",
             "recipient": "org:publisher",
-            "outputHash": "991f6f07a378c0f925ff06d4e11cd4fb5c15792318120215fc74c405036d6cea",
-            "resultHash": "8658e296b9891bb2b01aa2280b8d6345d61a59cd6cf436dfa213ce4e81f0658a",
+            "outputHash": "99f8e068fa4ac7161d44361b11178b5f73ae3eec47ba1efa086838d3b930ed14",
+            "resultHash": "b5995ec84ef6a766033fc62b11ee727165517f836a287a240c635c0991c2bc40",
             "status": "DELIVERED",
             "allocation": {
               "beneficiary": "org:publisher",
@@ -604,29 +604,29 @@
               "unit": "NONE"
             },
             "sequence": 3,
-            "previousReceiptHash": "357eabec126817f49fb7a9b0c21baad638b14d379df37fa019151cefff2fa669"
+            "previousReceiptHash": "6d77ad180408acbf404ad3cd25fd84da3ccfc0b701b6a5f5e4ce0ff343942924"
           },
           "signatures": [
             {
               "signer": "operator:local",
-              "signature": "FhoGkInamHoJOHS3mJiwM4EsLXTQR2CG2WrVmDZqAjcO3pKeVT1tOKPVQO23AtdFE1Xf3OGa6PUSK0aE4Ki8Bg=="
+              "signature": "XNCJ1OypmOKHaiKPGOpAm/79Wxhn9sugj6NXuigNHrhUd16/hIPZVMMJchhOoPzGp28mBMbJFz4yo1KgmCgzDg=="
             }
           ]
         }
       },
       "acknowledgement": {
         "body": {
-          "version": "agent-sdp404/2.0",
+          "version": "agent-sdp/3.0",
           "domain": "local:demo",
           "type": "acknowledgement",
           "exchangeId": "exchange:nft-genesis",
-          "receiptHash": "b3e18497e3ec0c172e3c5e0278e97d22609888cd7eb8498909fd5f7795ba44d7",
+          "receiptHash": "6a8d8d9a3646bfbfecc5c45eb33642d9b811aa9a2af8097ea5ba5acd9fef0333",
           "recipient": "org:publisher"
         },
         "signatures": [
           {
             "signer": "org:publisher",
-            "signature": "uBtjM3lkUbR3fzeafIXJCEpIFmjU3akwRjjVnQgowfGABlGRgOfV7+xQJIZBuc9nQWHdBxkp7bCdenQd+s8sBQ=="
+            "signature": "9BmbIunlisLgu3fKFKJ0utoz6BZqeafNhcZL4Ovc7vgXvQIDceMyol7Dn/ckmVDZ+aXTq8fZwqBaZaA8SVaGCA=="
           }
         ]
       }
@@ -635,7 +635,7 @@
       "input": {
         "grant": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "mandate",
             "grantId": "grant:nft-successor",
@@ -663,18 +663,18 @@
           "signatures": [
             {
               "signer": "org:incoming",
-              "signature": "u49N32TvFjuFoHovix7AUg77w1ufWbdEwJ19uy5Xt+MKVVWDpGd4bRCSdfGnHIVyeOW3dDvcXKHsyKG+eMfvBQ=="
+              "signature": "SvoErCspMiLXPn/c+F9FQtHqcIR9krXfGpAD0X+Ur8UmZxu1ITEnjhYamxyJuzwGt48BiKWGOwYKlxwbCDlQBw=="
             }
           ]
         },
         "agreement": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "agreement",
             "exchangeId": "exchange:nft-successor",
             "grantId": "grant:nft-successor",
-            "grantHash": "777490f699ab314e6605f16b83d65036907afc6cfbd6e744f819aa68bc4e4cf6",
+            "grantHash": "a54f9476d08d35360dcd47b11811cf7c9e8b2b275199c0819dcc77520752fe97",
             "principal": "org:incoming",
             "agent": "agent:maker",
             "recipient": "org:incoming",
@@ -683,13 +683,13 @@
             "sources": [
               {
                 "sourceId": "source:nft-successor",
-                "descriptorHash": "076b8be1eba258ec428d76b482d883f9cc2deff5633cc9a92cbee8c7b9cb46e4"
+                "descriptorHash": "89ff7f144580b0441b48970edaafc9d34e36bc5c4a92d3eb84d763de6f84278a"
               }
             ],
             "plan": {
               "kind": "nft-create",
               "seatId": "seat:demo",
-              "predecessor": "simulated:nft-create:a48026f265a05bc52549efc9",
+              "predecessor": "simulated:nft-create:3fb7db0e7d715d5d0f1945e2",
               "beneficiary": "org:incoming"
             },
             "nonce": "nonce:nft-successor",
@@ -699,22 +699,22 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "cGptg6ml1GhNqbATJGNNqrzvIeP9v5P9g8XgRXIfTgjKgmvhxXM/L38KFSELQOXtNTkrGNYPD+LpMaQWY9F1Ag=="
+              "signature": "72a8KOkntiwier6kqStFOizFvdN910z/eADFtsE/O5YTa9d+XGPAx8alTIZ9sBgdMldacEDP9uF6g694qsLkBg=="
             },
             {
               "signer": "org:incoming",
-              "signature": "szYRC4XfRXsdF+gU4YAjiPbtg7Eoh0j2wjzIy2bGWVvoQZ37J0xPZ5rKwKHlGorFosrADdAvC0V4NtJ6zrDABA=="
+              "signature": "K+VokbE7nkjQoeC6Zuj+qKMthU8w8qW1pWSmaYUFsi3hVFKKTJnR+jSM0VbkzGyQP8SfxnkgPPpmwA+nP0DLAQ=="
             },
             {
               "signer": "org:publisher",
-              "signature": "EhIa2QQRdRfAqrk0w9ACQk15UjoTaM+zPOzj0dmMNv8Wvy6amvaytGK05sOT0u3K92xLWl+TgDjmqg3YtzziAg=="
+              "signature": "cgdX9fFnjnU1+nF8DVRxeTzZpduqE/VIQRc1RjewDOYGzQNBnc+Jtd7WtbmY0Wg1B/MXYlALSQYAEPNCWPwtCQ=="
             }
           ]
         },
         "sources": [
           {
             "body": {
-              "version": "agent-sdp404/2.0",
+              "version": "agent-sdp/3.0",
               "domain": "local:demo",
               "type": "source",
               "sourceId": "source:nft-successor",
@@ -740,7 +740,7 @@
             "signatures": [
               {
                 "signer": "org:source",
-                "signature": "9a8adM1lDXaSD1AFHmG8wQbk7LIIzHClbJ9wfai8PbJ7PbSebDelFb6O5cTLt1Z4ErusdrvyR8jORxj0zOH+AQ=="
+                "signature": "hiPjuqfoAR/8o+OCTYLbnqdkvYjL46w7oqfvdmB0w0ZxSxq6016OUKdnUf0X/DGsKqVQW+Pgh9aO+EfjdxyeDw=="
               }
             ]
           }
@@ -754,20 +754,20 @@
       "output": {
         "result": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "result",
             "exchangeId": "exchange:nft-successor",
-            "agreementHash": "4dbca3ecd89a9b3f02636e850a071169b18649d38cae57d83cb468c9b6325413",
-            "outputHash": "3139e30265e2975cff081a6238ebb34d4c62e6a4c21ee7972205038590655f42",
+            "agreementHash": "29083693c3e90d09a25409058e2243eb2f31719e4dc1f4099bc93dd75a318974",
+            "outputHash": "cf269eb69720313b5c53b4b16ae1f427d9af3f9a4f82fa82f280796b4081d045",
             "output": {
               "kind": "nft-create",
-              "assetId": "simulated:nft-create:4dbca3ecd89a9b3f02636e85",
+              "assetId": "simulated:nft-create:29083693c3e90d09a2540905",
               "simulation": true,
               "plan": {
                 "kind": "nft-create",
                 "seatId": "seat:demo",
-                "predecessor": "simulated:nft-create:a48026f265a05bc52549efc9",
+                "predecessor": "simulated:nft-create:3fb7db0e7d715d5d0f1945e2",
                 "beneficiary": "org:incoming"
               },
               "derivedFrom": "19ea767cadf06a3d534f7c212e6c167d87e17d95249f6190eb427892a3acdb56"
@@ -776,23 +776,23 @@
           "signatures": [
             {
               "signer": "agent:maker",
-              "signature": "AM+qRQznktKA4S5fba94M8ARKz9npGH0bukyjlxRTxnyZs3W6oXRXkLhMYWzkKWwbWs1vOkxLVdncRP6tc8VAw=="
+              "signature": "aF/Q1oJZtvUWc25V/GurtFhNBiw+s7QrYz9Xc1WaLmvkYLVg/YelLkJHiWr/N0wg3rBzhUByijYjAev8UFq0AQ=="
             }
           ]
         },
         "receipt": {
           "body": {
-            "version": "agent-sdp404/2.0",
+            "version": "agent-sdp/3.0",
             "domain": "local:demo",
             "type": "receipt",
             "exchangeId": "exchange:nft-successor",
-            "agreementHash": "4dbca3ecd89a9b3f02636e850a071169b18649d38cae57d83cb468c9b6325413",
-            "grantHash": "777490f699ab314e6605f16b83d65036907afc6cfbd6e744f819aa68bc4e4cf6",
+            "agreementHash": "29083693c3e90d09a25409058e2243eb2f31719e4dc1f4099bc93dd75a318974",
+            "grantHash": "a54f9476d08d35360dcd47b11811cf7c9e8b2b275199c0819dcc77520752fe97",
             "principal": "org:incoming",
             "agent": "agent:maker",
             "recipient": "org:incoming",
-            "outputHash": "3139e30265e2975cff081a6238ebb34d4c62e6a4c21ee7972205038590655f42",
-            "resultHash": "2d2702c31f89885cff485d1393591c5b9cda94b7917705ff177ad6c6972c8c39",
+            "outputHash": "cf269eb69720313b5c53b4b16ae1f427d9af3f9a4f82fa82f280796b4081d045",
+            "resultHash": "0d4abc706333de503ff5bf62273101743b2f57748481b2007d7f175341d7bd0c",
             "status": "DELIVERED",
             "allocation": {
               "beneficiary": "org:incoming",
@@ -800,29 +800,29 @@
               "unit": "NONE"
             },
             "sequence": 4,
-            "previousReceiptHash": "b3e18497e3ec0c172e3c5e0278e97d22609888cd7eb8498909fd5f7795ba44d7"
+            "previousReceiptHash": "6a8d8d9a3646bfbfecc5c45eb33642d9b811aa9a2af8097ea5ba5acd9fef0333"
           },
           "signatures": [
             {
               "signer": "operator:local",
-              "signature": "Cwtnu+H6gyLp8ruafvWKA8TiRGGVUA1J3Ck/LqfbYO39sxsYswuVTW6wtBUQR2Xcjw9Vmc5KFRoFgL7cLNeDCQ=="
+              "signature": "/lNBvSMZrYWZbi7v+u065ixyoZ1OF02u0guVaj6ips8/QOn+qLvck2pujv0/diylr8WYKEZJni+CAuR6wOiYCQ=="
             }
           ]
         }
       },
       "acknowledgement": {
         "body": {
-          "version": "agent-sdp404/2.0",
+          "version": "agent-sdp/3.0",
           "domain": "local:demo",
           "type": "acknowledgement",
           "exchangeId": "exchange:nft-successor",
-          "receiptHash": "d0d16feb647a0131f1b58acd3a983ed4a0565e07ff67faf2c1446ff55cabf71f",
+          "receiptHash": "21681b9007adff4072763259733095759e2439f6483883209f02e17fba6b64fc",
           "recipient": "org:incoming"
         },
         "signatures": [
           {
             "signer": "org:incoming",
-            "signature": "VrffYIcH8ppw3hcxtokeZIM7v7j8seDRgb9bgNuxY8ssU/c9qom2QDLagLBzJc1kMldEgqpHSmeT8l2nj5RwDQ=="
+            "signature": "qvaHoQe/YHExndltCD+bLg5amIIjgJEWJonqzBJKt1lkCkKFS4CpMVg1b2Z5P5Kj+ct6yG5eLTgUifgyQV19DQ=="
           }
         ]
       }
@@ -831,19 +831,19 @@
   "conflictingReplay": "IDEMPOTENCY_CONFLICT",
   "assetState": [
     {
-      "id": "simulated:nft-create:4dbca3ecd89a9b3f02636e85",
+      "id": "simulated:nft-create:29083693c3e90d09a2540905",
       "kind": "nft",
       "owner": "org:incoming",
       "retired": 0
     },
     {
-      "id": "simulated:nft-create:a48026f265a05bc52549efc9",
+      "id": "simulated:nft-create:3fb7db0e7d715d5d0f1945e2",
       "kind": "nft",
       "owner": "org:publisher",
       "retired": 1
     },
     {
-      "id": "simulated:token-create:fdc74536f135c988c90e9144",
+      "id": "simulated:token-create:6e38d4702424487d11c9bbc6",
       "kind": "token",
       "owner": "org:publisher",
       "retired": 0

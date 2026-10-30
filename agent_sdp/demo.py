@@ -12,10 +12,10 @@ from .fixtures import NOW, World
 
 def run(output=None):
     world = World()
-    with tempfile.TemporaryDirectory(prefix="agent-sdp404-") as directory:
+    with tempfile.TemporaryDirectory(prefix="agent-sdp-") as directory:
         engine = Engine(str(Path(directory) / "ledger.sqlite"), world.registry,
                         "operator:local", world.keys["operator:local"], clock=lambda: NOW)
-        trace = {"profile": "agent-sdp404/local-1", "dataNotice": "All source data is synthetic. Asset adapters are local simulations; signatures and SQLite transactions are real.",
+        trace = {"profile": "agent-sdp/local-1", "dataNotice": "All source data is synthetic. Asset adapters are local simulations; signatures and SQLite transactions are real.",
                  "clock": NOW, "publicKeys": {name: base64.b64encode(public.public_bytes_raw()).decode()
                                               for name, public in world.registry.items()}, "exchanges": []}
 

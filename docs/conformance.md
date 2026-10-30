@@ -1,13 +1,13 @@
 # Enforcement and conformance matrix
 
-Specification version: 2.0.0. Local wire profile: `agent-sdp404/local-1`. Reference maturity: alpha.
+Specification version: 3.0.0. Local wire profile: `agent-sdp/local-1`. Reference maturity: alpha.
 
 | Claim | Status in this release | Evidence and limit |
 |---|---|---|
 | Multiple kinds of data sources | Implemented descriptor vocabulary | Source schema; source kind does not prove legality, truth or freshness |
 | Source conditions separate from task authority | Implemented local checks | Controller-signed descriptors and principal-signed mandates |
 | Principal, agent and recipient acceptance | Implemented Ed25519 verification | Trusted local key registry; not decentralized identity discovery |
-| Concrete signed message encoding | Implemented | SDP404-JSON-1, domain separation, full envelope schema |
+| Concrete signed message encoding | Implemented | SDP-JSON-1, domain separation, full envelope schema |
 | Stable terms and input/output commitments | Implemented local checks | Hash and signature binding; deterministic fixtures |
 | At-most-once local exchange effect | Implemented and tested | SQLite transaction, persisted response, unique exchange ID and nonce |
 | Concurrent duplicate handling | Tested with two connections | Shared local database only; not distributed consensus |

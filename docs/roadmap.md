@@ -2,7 +2,7 @@
 
 This roadmap describes work, not dates, adoption claims or promised integrations.
 
-## Available in 2.0.0
+## Available in 3.0.0
 
 - General data-source model and independent protocol identity.
 - A concrete signed local exchange profile and executable alpha.

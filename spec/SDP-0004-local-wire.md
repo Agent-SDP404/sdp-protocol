@@ -1,17 +1,17 @@
-# SDP404-0004: Local signed exchange profile
+# SDP-0004: Local signed exchange profile
 
-Specification: 2.0.0 · Profile: `agent-sdp404/local-1` · Implementation maturity: alpha.
+Specification: 3.0.0 · Profile: `agent-sdp/local-1` · Implementation maturity: alpha.
 
 This profile is a concrete, bounded implementation of the general exchange model. It supports finite snapshots, zero-fee exchanges, local deterministic adapters, unused-right assignment and local revocation. It does not claim to implement every general-core extension.
 
 ## 1. Message types and schema
 
-The normative envelope shape is defined in [wire.schema.json](../agent_sdp404/schemas/wire.schema.json):
+The normative envelope shape is defined in [wire.schema.json](../agent_sdp/schemas/wire.schema.json):
 
 ```json
 {
   "body": {
-    "version": "agent-sdp404/2.0",
+    "version": "agent-sdp/3.0",
     "domain": "local:demo",
     "type": "agreement"
   },
@@ -38,14 +38,14 @@ NFT succession also requires the predecessor owner's signature over the new agre
 
 ## 2. Canonical bytes and signatures
 
-This profile uses **SDP404-JSON-1**, not RFC 8785/JCS. Its restricted input is JSON objects/arrays, strings, booleans, null and integers in `[-9007199254740991, 9007199254740991]`. Floats and lone Unicode surrogates are rejected. Property names must be ASCII and duplicate property names must be rejected before parsing into a map.
+This profile uses **SDP-JSON-1**, not RFC 8785/JCS. Its restricted input is JSON objects/arrays, strings, booleans, null and integers in `[-9007199254740991, 9007199254740991]`. Floats and lone Unicode surrogates are rejected. Property names must be ASCII and duplicate property names must be rejected before parsing into a map.
 
 Canonicalization recursively sorts object property names in ascending ASCII order, preserves array order, emits no insignificant whitespace, represents integers in base 10 without leading zeros and serializes strings using Python `json.dumps(..., ensure_ascii=True)` escaping. Non-ASCII characters are escaped as lowercase hexadecimal `\u` sequences, using surrogate pairs for supplementary characters. Standard short escapes are used for backspace, tab, newline, form feed and carriage return; quotation marks and backslashes are escaped; forward slashes are not escaped. Implementations must match the [canonical vectors](../examples/wire-vectors.json).
 
 Content digests are lowercase hexadecimal SHA-256 of canonical body/output bytes. Signature bytes are:
 
 ```text
-UTF8("AGENT-SDP404/2.0/SDP404-JSON-1") || 0x00 || canonical(body)
+UTF8("agent-sdp/3.0/SDP-JSON-1") || 0x00 || canonical(body)
 ```
 
 Each signature is Ed25519 over those bytes, encoded in standard padded Base64. Keys come from a trusted identity registry and must not be accepted merely because an untrusted envelope supplies them. The demo's public registry is synthetic and self-contained; it establishes no external identity.
@@ -123,4 +123,4 @@ All local-1 exchanges have `maxChargeMinor = 0`. Nonzero economic settlement is 
 
 These errors are local exception codes, not yet an HTTP status mapping. SQLite availability errors and process termination are operational failures; they must not be silently mapped to successful delivery.
 
-See the [runtime](../agent_sdp404/engine.py), [tests](../tests/test_reference.py), [public trace](../examples/traces/local-exchange.json) and [enforcement matrix](../docs/conformance.md).
+See the [runtime](../agent_sdp/engine.py), [tests](../tests/test_reference.py), [public trace](../examples/traces/local-exchange.json) and [enforcement matrix](../docs/conformance.md).

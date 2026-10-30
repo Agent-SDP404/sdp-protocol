@@ -1,6 +1,6 @@
 # Architecture
 
-AGENT-SDP404 connects data-source conditions, execution authority and exchange evidence. A source may be controlled by a different party from the principal requesting the task.
+agent-sdp connects data-source conditions, execution authority and exchange evidence. A source may be controlled by a different party from the principal requesting the task.
 
 ```mermaid
 flowchart LR
@@ -61,4 +61,4 @@ A real model API, remote delivery or blockchain transaction cannot simply be pla
 
 ## Transport and integration boundary
 
-MCP may supply tools/data connections and A2A may carry task interactions. An adapter must preserve the signed scope and evidence across those transports. This release supplies a local wire profile, not an MCP server, A2A service, DID resolver or blockchain adapter. See [positioning](positioning.md) and [the wire profile](../spec/SDP404-0004-local-wire.md).
+MCP may supply tools/data connections and A2A may carry task interactions. An adapter must preserve the signed scope and evidence across those transports. This release supplies a local wire profile, not an MCP server, A2A service, DID resolver or blockchain adapter. See [positioning](positioning.md) and [the wire profile](../spec/SDP-0004-local-wire.md).

@@ -20,7 +20,7 @@ Local link checking excludes virtual environments and build outputs. External li
 
 ## Proof verification
 
-`python -m agent_sdp404.verify_trace examples/traces/local-exchange.json` validates the four checked-in exchanges, including signatures, accepted terms, source integrity/policies, one-hop assignment evidence, acknowledgement bindings, receipt sequence and deterministic adapter outputs. The public keys are synthetic local identities, not independently attested real-world principals.
+`python -m agent_sdp.verify_trace examples/traces/local-exchange.json` validates the four checked-in exchanges, including signatures, accepted terms, source integrity/policies, one-hop assignment evidence, acknowledgement bindings, receipt sequence and deterministic adapter outputs. The public keys are synthetic local identities, not independently attested real-world principals.
 
 ## Limits
 

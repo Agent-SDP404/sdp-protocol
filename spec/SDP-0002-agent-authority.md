@@ -1,6 +1,6 @@
-# SDP404-0002: Agents, autonomy and developer authority
+# SDP-0002: Agents, autonomy and developer authority
 
-Status: specification release `2.0.0`. Normative vocabulary follows [the core](SDP404-0001-core.md).
+Status: specification release `3.0.0`. Normative vocabulary follows [the core](SDP-0001-core.md).
 
 ## 1. Principal representation
 
@@ -12,7 +12,7 @@ The agent can transform permitted source data and context into a public-safe ans
 
 The agent MAY choose reasoning steps, tools, output structure and intermediate plans within policy. It MUST NOT treat creative or operational autonomy as authority to spend without limits, disclose all memories, select a different beneficiary, grant persistent access, or continue unrelated tasks.
 
-Applications may be interactive, autonomous or mixed. A mandatory no-draft creative workflow belongs to a particular profile, not to all AGENT-SDP404 applications. Likewise, a user may explicitly request review before disclosure or authorize automatic delivery within defined conditions.
+Applications may be interactive, autonomous or mixed. A mandatory no-draft creative workflow belongs to a particular profile, not to all agent-sdp applications. Likewise, a user may explicitly request review before disclosure or authorize automatic delivery within defined conditions.
 
 ## 3. Distinct authority classes
 
@@ -77,4 +77,4 @@ Principals MUST have the profile's declared way to stop future use of a mandate.
 
 Applications MUST distinguish revoking future authority from cancelling accepted obligations, receiving a refund and deleting retained data. These have different conditions. No universal refund or erasure guarantee is created by this specification.
 
-See [exchange rights](SDP404-0003-exchange-rights.md) and [security](../docs/security.md).
+See [exchange rights](SDP-0003-exchange-rights.md) and [security](../docs/security.md).

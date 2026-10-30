@@ -7,7 +7,7 @@ ROOT = Path(__file__).resolve().parents[1]
 for command in [
     ["tools/validate.py"],
     ["-m", "unittest", "discover", "-s", "tests", "-v"],
-    ["-m", "agent_sdp404.verify_trace", "examples/traces/local-exchange.json"],
+    ["-m", "agent_sdp.verify_trace", "examples/traces/local-exchange.json"],
 ]:
     subprocess.run([sys.executable, *command], cwd=ROOT, check=True)
 print("PASS: documentation, legacy fixtures, reference runtime and signed proof bundle")

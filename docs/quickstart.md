@@ -10,15 +10,15 @@ Activate `.venv` using your platform's normal procedure, then run:
 
 ```sh
 python -m pip install -r requirements.txt
-python -m agent_sdp404.demo --output dist/demo-trace.json
-python -m agent_sdp404.verify_trace dist/demo-trace.json
+python -m agent_sdp.demo --output dist/demo-trace.json
+python -m agent_sdp.verify_trace dist/demo-trace.json
 python tools/check.py
 ```
 
 The reference uses cryptography for Ed25519 and jsonschema for the full local wire envelope. The checked-in proof bundle can be verified without running the demo:
 
 ```sh
-python -m agent_sdp404.verify_trace examples/traces/local-exchange.json
+python -m agent_sdp.verify_trace examples/traces/local-exchange.json
 ```
 
 ## Read the trace

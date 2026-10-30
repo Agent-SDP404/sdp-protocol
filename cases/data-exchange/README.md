@@ -13,8 +13,8 @@ The reference verifies both source and task authority, then produces `sampleCoun
 Run:
 
 ```sh
-python -m agent_sdp404.demo --output dist/demo-trace.json
-python -m agent_sdp404.verify_trace dist/demo-trace.json
+python -m agent_sdp.demo --output dist/demo-trace.json
+python -m agent_sdp.verify_trace dist/demo-trace.json
 ```
 
 Inspect `exchange:research` in [the public trace](../../examples/traces/local-exchange.json).

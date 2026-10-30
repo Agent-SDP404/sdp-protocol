@@ -1,12 +1,12 @@
-<p align="center"><img src="assets/brand-header.svg" alt="AGENT-SDP404 — Data becomes capability" width="100%"></p>
+<p align="center"><img src="assets/brand-header.svg" alt="agent-sdp — Data becomes capability" width="100%"></p>
 
-# AGENT-SDP404
+# agent-sdp
 
 **A protocol for turning data into capabilities, exchanges and attributable outcomes through agents.**
 
-[Specification 2.0.0](spec/SDP404-0001-core.md) · [Run the reference alpha](#run-an-exchange) · [Apache-2.0](LICENSE) · [Release notes](releases/v2.0.0.md)
+[Specification 3.0.0](spec/SDP-0001-core.md) · [Run the reference alpha](#run-an-exchange) · [Apache-2.0](LICENSE) · [Release notes](releases/v3.0.0.md)
 
-Data comes from people, organizations, public sources, research, devices, environments and other agents. AGENT-SDP404 describes how an Agent can use that data under its source conditions, agree on an exchange, execute a bounded capability and return verifiable results to the right recipients.
+Data comes from people, organizations, public sources, research, devices, environments and other agents. agent-sdp describes how an Agent can use that data under its source conditions, agree on an exchange, execute a bounded capability and return verifiable results to the right recipients.
 
 **Source rules travel into the task. Authority travels with the action. Evidence travels with the result.**
 
@@ -22,8 +22,8 @@ Python 3.10+; no wallet, API key or model account required. From this checkout:
 
 ```sh
 python -m pip install -r requirements.txt
-python -m agent_sdp404.demo --output dist/demo-trace.json
-python -m agent_sdp404.verify_trace dist/demo-trace.json
+python -m agent_sdp.demo --output dist/demo-trace.json
+python -m agent_sdp.verify_trace dist/demo-trace.json
 ```
 
 The demo performs four signed exchanges and deliberately rejects a conflicting replay:
@@ -45,7 +45,7 @@ Inspect the committed [public proof bundle](examples/traces/local-exchange.json)
 
 ## What the protocol adds
 
-| Layer | What AGENT-SDP404 makes explicit |
+| Layer | What agent-sdp makes explicit |
 |---|---|
 | Source | Origin, controller, use conditions, disclosure audience and snapshot identity |
 | Authority | Who may invoke an Agent, for which purpose, inputs and recipients |
@@ -69,11 +69,11 @@ NFTs and tokens are two applications. The protocol is independent of both, and i
 
 ## Read, build, verify
 
-- [Core specification](spec/SDP404-0001-core.md): source-aware actors, objects and lifecycle.
-- [Agent authority](spec/SDP404-0002-agent-authority.md): bounded autonomy and developer authority.
-- [Exchange and rights](spec/SDP404-0003-exchange-rights.md): acceptance, use, delegation, assignment and allocation.
-- [Local wire profile](spec/SDP404-0004-local-wire.md): concrete envelopes, signing bytes, state transitions and errors.
-- [Wire schema](agent_sdp404/schemas/wire.schema.json): sources, mandates, agreements, assignments, results, receipts and acknowledgements.
+- [Core specification](spec/SDP-0001-core.md): source-aware actors, objects and lifecycle.
+- [Agent authority](spec/SDP-0002-agent-authority.md): bounded autonomy and developer authority.
+- [Exchange and rights](spec/SDP-0003-exchange-rights.md): acceptance, use, delegation, assignment and allocation.
+- [Local wire profile](spec/SDP-0004-local-wire.md): concrete envelopes, signing bytes, state transitions and errors.
+- [Wire schema](agent_sdp/schemas/wire.schema.json): sources, mandates, agreements, assignments, results, receipts and acknowledgements.
 - [Architecture](docs/architecture.md), [security](docs/security.md), [validation](docs/validation.md), [roadmap](docs/roadmap.md).
 
 ```sh
@@ -82,7 +82,7 @@ python tools/check.py
 
 ## Status and compatibility
 
-**Specification: 2.0.0. Reference implementation: alpha.** The local profile is executable; network transports, live models, chain adapters and distributed enforcement are not included. Claims and limitations are mapped in [the conformance matrix](docs/conformance.md).
+**Specification: 3.0.0. Reference implementation: alpha.** The local profile is executable; network transports, live models, chain adapters and distributed enforcement are not included. Claims and limitations are mapped in [the conformance matrix](docs/conformance.md).
 
 The renamed, expanded data model and signed profile are not wire-compatible with v1 examples. See [migration and versioning](docs/versioning.md). The original [v1.0.0 release](https://github.com/Agent-SDP404/sdp-protocol/releases/tag/v1.0.0) remains unchanged.
 

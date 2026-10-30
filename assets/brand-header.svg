@@ -1,10 +1,10 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1400" height="440" viewBox="0 0 1400 440" role="img" aria-labelledby="title desc">
-  <title id="title">AGENT-SDP404 — Data becomes capability.</title>
+  <title id="title">agent-sdp — Data becomes capability.</title>
   <desc id="desc">Independent agent exchange protocol. Many data sources converge through an agent and emerge as results and rights. Specification 2.0, reference alpha.</desc>
   <rect width="1400" height="440" fill="#f4f1e8"/>
   <path d="M58 54h1284M58 365h1284" stroke="#171918" stroke-width="1"/>
   <text x="60" y="39" font-family="monospace" font-size="15" letter-spacing="3" fill="#343831">SOURCE / AUTHORITY / EXCHANGE</text>
-  <text x="60" y="155" font-family="Arial,Helvetica,sans-serif" font-size="96" font-weight="800" letter-spacing="-5" fill="#111715">AGENT-SDP404</text>
+  <text x="60" y="155" font-family="Arial,Helvetica,sans-serif" font-size="96" font-weight="800" letter-spacing="-5" fill="#111715">agent-sdp</text>
   <text x="64" y="221" font-family="Arial,Helvetica,sans-serif" font-size="38" letter-spacing="-1" fill="#111715">Data becomes capability.</text>
   <text x="65" y="276" font-family="Arial,Helvetica,sans-serif" font-size="19" fill="#4d554e">An independent protocol for agent-mediated exchange.</text>
   <text x="64" y="325" font-family="monospace" font-size="14" letter-spacing="1" fill="#6a706a">PEOPLE · ORGANIZATIONS · RESEARCH · DEVICES · AGENTS</text>
@@ -16,6 +16,6 @@
   <rect x="1092" y="181" width="46" height="46" rx="2" fill="#111715"/>
   <path d="M1104 204h21m-7-7 7 7-7 7" stroke="#f4f1e8" stroke-width="2" fill="none"/>
   <g stroke="#c35225" fill="#f4f1e8" stroke-width="2.5"><circle cx="1275" cy="132" r="8"/><rect x="1293" y="197" width="14" height="14"/><path d="M1275 266l10 17h-20z"/></g>
-  <text x="60" y="405" font-family="monospace" font-size="16" letter-spacing="1.3" fill="#111715">SPECIFICATION 2.0 / REFERENCE ALPHA</text>
+  <text x="60" y="405" font-family="monospace" font-size="16" letter-spacing="1.3" fill="#111715">SPECIFICATION 3.0 / REFERENCE ALPHA</text>
   <text x="1340" y="405" text-anchor="end" font-family="monospace" font-size="16" letter-spacing="1.3" fill="#111715">OPEN SOURCE / APACHE-2.0</text>
 </svg>

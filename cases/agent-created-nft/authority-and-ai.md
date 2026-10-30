@@ -1,8 +1,8 @@
-> Application profile, preserved from the initial NFT-focused draft. Its seats, one-output rules, retirement semantics and mint entitlements apply to this case only. They are not requirements of the general AGENT-SDP404 core. See [the general protocol](../../README.md).
+> Application profile, preserved from the initial NFT-focused draft. Its seats, one-output rules, retirement semantics and mint entitlements apply to this case only. They are not requirements of the general agent-sdp core. See [the general protocol](../../README.md).
 
 # NFT-CASE-02: Authority, AI execution and mint entitlements
 
-Status: application case in AGENT-SDP404 `2.0.0`. Normative vocabulary follows [NFT-CASE-01](lifecycle.md).
+Status: application case in agent-sdp `3.0.0`. Normative vocabulary follows [NFT-CASE-01](lifecycle.md).
 
 ## 1. The AI application boundary
 
@@ -39,7 +39,7 @@ NFT-AUTH-01: Authentication MUST prove account control or delegated identity; it
 
 NFT-AUTH-02: Creation delegation MUST identify instance, recipient, scope, policy, permitted actions and economic limits. Its representation may be a session grant, wallet delegation or another profile-defined proof. The agent MUST preserve the evidence; an application's `requireConfirmation=false` flag is not participant consent.
 
-NFT-AUTH-03: Payment authorization MUST bind payer, payee/contract, asset, amount, order and network. An unlimited token approval is not a requirement of AGENT-SDP404.
+NFT-AUTH-03: Payment authorization MUST bind payer, payee/contract, asset, amount, order and network. An unlimited token approval is not a requirement of agent-sdp.
 
 NFT-AUTH-04: Mint authorization MUST bind the beneficiary, order, immutable content commitments, applicable policy and ledger domain. A protocol service's permit is a statement that conditions are met; participant authorization is independently required. Explicitly delegated relayers MAY submit when the adapter verifies beneficiary authority and the same bindings. The default observed application route is participant-wallet submission.
 

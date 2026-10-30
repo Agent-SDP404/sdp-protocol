@@ -11,7 +11,7 @@ from pathlib import Path
 from jsonschema import Draft202012Validator
 from .crypto import ProtocolError, canonical, check, digest, sign, verify
 
-VERSION = "agent-sdp404/2.0"
+VERSION = "agent-sdp/3.0"
 SCHEMA = json.loads((Path(__file__).parent / "schemas/wire.schema.json").read_text(encoding="utf-8"))
 VALIDATOR = Draft202012Validator(SCHEMA)
 

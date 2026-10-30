@@ -1,13 +1,13 @@
 {
   "$schema": "https://json-schema.org/draft/2020-12/schema",
-  "$id": "urn:agent-sdp404:2.0:local-wire",
-  "title": "AGENT-SDP404 local reference profile envelopes",
+  "$id": "urn:agent-sdp:3.0:local-wire",
+  "title": "agent-sdp local reference profile envelopes",
   "$defs": {
     "source": {
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -106,7 +106,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -212,7 +212,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -409,7 +409,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -466,7 +466,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -502,7 +502,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -542,7 +542,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",
@@ -642,7 +642,7 @@
       "type": "object",
       "properties": {
         "version": {
-          "const": "agent-sdp404/2.0"
+          "const": "agent-sdp/3.0"
         },
         "domain": {
           "type": "string",

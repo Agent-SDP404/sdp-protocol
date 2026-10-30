@@ -2,15 +2,15 @@
 
 **An Agent turns permitted project data, organizational intent or community context into an authorized token creation and distribution plan.**
 
-Status: illustrative AGENT-SDP404 application profile. This document describes a proposed workflow, not a deployed token, launch service or executable contract. It creates no requirement for other AGENT-SDP404 applications to issue tokens.
+Status: illustrative agent-sdp application profile. This document describes a proposed workflow, not a deployed token, launch service or executable contract. It creates no requirement for other agent-sdp applications to issue tokens.
 
 ## Run the case
 
-Run `python -m agent_sdp404.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:token` in [the signed proof bundle](../../examples/traces/local-exchange.json).
+Run `python -m agent_sdp.demo --output dist/demo-trace.json` from the repository root after installing requirements. Inspect `exchange:token` in [the signed proof bundle](../../examples/traces/local-exchange.json).
 
 The fixture begins with a principal-approved one-use creation mandate, then assigns it to a successor Agent with principal/current-agent/successor signatures. The agreement pins a synthetic 1,000-unit supply, exact allocations and named administrator. The local adapter verifies allocation totals, records the simulated token and commits a signed result/receipt. The recipient signs an acknowledgement.
 
-This is a real signed exchange with a simulated issuance adapter. It performs no blockchain transaction. The failure suite covers missing handoff acceptance, execution by the old holder, reused allowance and allocation mismatch. See [local wire semantics](../../spec/SDP404-0004-local-wire.md) and [tests](../../tests/test_reference.py).
+This is a real signed exchange with a simulated issuance adapter. It performs no blockchain transaction. The failure suite covers missing handoff acceptance, execution by the old holder, reused allowance and allocation mismatch. See [local wire semantics](../../spec/SDP-0004-local-wire.md) and [tests](../../tests/test_reference.py).
 
 
 ## 1. From permitted data to a shared instrument
@@ -25,9 +25,9 @@ The token becomes an externally usable representation within an application. It 
 
 Token creation is the issuance step. Exchange occurs when the resulting representation, access or participation rights are delivered and used under an agreement. Creating a token alone does not establish demand, economic value or fulfilled utility.
 
-## 2. Mapping to AGENT-SDP404
+## 2. Mapping to agent-sdp
 
-| AGENT-SDP404 object | Token-creation application |
+| agent-sdp object | Token-creation application |
 |---|---|
 | Principal | The person or organization authorizing the token initiative |
 | Context | Approved intent, preferences, community information and project material |
@@ -120,8 +120,8 @@ A completion report distinguishes plan acceptance, creation execution, finality,
 
 ## 9. What this case demonstrates
 
-The same AGENT-SDP404 chain can produce an answer, a creative work or a token-backed coordination mechanism. In each case, permitted data supplies context; the agent produces an outward representation; authorization constrains execution; and the result returns to the agreed beneficiaries.
+The same agent-sdp chain can produce an answer, a creative work or a token-backed coordination mechanism. In each case, permitted data supplies context; the agent produces an outward representation; authorization constrains execution; and the result returns to the agreed beneficiaries.
 
-Token issuance is one adapter for that chain. It does not redefine AGENT-SDP404 as a token-launch protocol.
+Token issuance is one adapter for that chain. It does not redefine agent-sdp as a token-launch protocol.
 
-See [the general core](../../spec/SDP404-0001-core.md), [AI authority](../../spec/SDP404-0002-agent-authority.md), [exchange and rights](../../spec/SDP404-0003-exchange-rights.md) and [application cases](../README.md).
+See [the general core](../../spec/SDP-0001-core.md), [AI authority](../../spec/SDP-0002-agent-authority.md), [exchange and rights](../../spec/SDP-0003-exchange-rights.md) and [application cases](../README.md).

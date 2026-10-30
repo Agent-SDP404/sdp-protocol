@@ -1,8 +1,15 @@
 # Changelog
 
+## 3.0.0 — 2026-10-30
+
+- Unified protocol branding as agent-sdp across documentation, release notes and artwork.
+- Renamed the Python package to agent_sdp and specification files to SDP identifiers.
+- Established the agent-sdp/3.0 signing namespace and regenerated synthetic proof records. Old signed envelopes require fresh authorization; this is a major wire compatibility change.
+
+
 ## 2.0.0 — 2026-10-30
 
-- Renamed the independent protocol AGENT-SDP404 and generalized source/principal modeling beyond personal context.
+- Renamed the independent protocol agent-sdp and generalized source/principal modeling beyond personal context.
 - Added a signed local wire profile and executable reference alpha.
 - Added source descriptors, accepted agreements, assignment, revocation, persisted receipts and replay protection.
 - Added research, token and NFT proof bundles, runtime tests and offline verification.

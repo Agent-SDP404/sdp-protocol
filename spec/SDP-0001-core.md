@@ -1,10 +1,10 @@
-# SDP404-0001: Agent-mediated data value exchange
+# SDP-0001: Agent-mediated data value exchange
 
-Status: specification release `2.0.0` · Date: 2026-10-30 · Project: AGENT-SDP404
+Status: specification release `3.0.0` · Date: 2026-10-30 · Project: agent-sdp
 
 ## 1. Abstract
 
-AGENT-SDP404 defines an application-layer exchange protocol in which agents transform data from permitted sources into externally usable representations, capabilities and actions. Sources may be personal, organizational, public, scientific, device-originated, environmental, agent-generated or composite. The protocol connects the source authority, permitted transformation, counterparty agreement, execution evidence, result allocation and optional feedback.
+agent-sdp defines an application-layer exchange protocol in which agents transform data from permitted sources into externally usable representations, capabilities and actions. Sources may be personal, organizational, public, scientific, device-originated, environmental, agent-generated or composite. The protocol connects the source authority, permitted transformation, counterparty agreement, execution evidence, result allocation and optional feedback.
 
 Information value includes useful answers, reduced uncertainty, creative expression, coordination, task execution and economic benefit. It does not require a market price. Restricted source information can remain within its access boundary while an authorized derivative or service participates in an exchange.
 
@@ -14,7 +14,7 @@ The protocol does not require NFTs, seats, minting, blockchains, a specific mode
 
 Uppercase MUST, MUST NOT, SHOULD and MAY have the meanings described in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119) and [RFC 8174](https://www.rfc-editor.org/rfc/rfc8174).
 
-This is the AGENT-SDP404 2.0.0 specification release. Conformance requires this core, [SDP404-0002](SDP404-0002-agent-authority.md), [SDP404-0003](SDP404-0003-exchange-rights.md) and a concrete application/wire profile. Example validity alone does not demonstrate conformance of a deployment.
+This is the agent-sdp 3.0.0 specification release. Conformance requires this core, [SDP-0002](SDP-0002-agent-authority.md), [SDP-0003](SDP-0003-exchange-rights.md) and a concrete application/wire profile. Example validity alone does not demonstrate conformance of a deployment.
 
 ## 3. Actors and boundaries
 
@@ -50,7 +50,7 @@ A mandate binds principal, agent, instance, audience, purpose, context scope, op
 
 The mandatory semantic distinction is between **derive**, **disclose**, **invoke**, **delegate**, **assign**, **settle**, **remember** and **update**. A profile may use other wire names but MUST preserve their separation. Reading source data can support derivation without permitting disclosure. Memory retention and device/business-system updates are separate permissions.
 
-The [local wire profile](SDP404-0004-local-wire.md) defines a concrete signed mandate and source envelope. [Legacy v1 examples](../examples/legacy-v1/mandates.json) are retained solely for migration context and must not be interpreted as v2 authorizations.
+The [local wire profile](SDP-0004-local-wire.md) defines a concrete signed mandate and source envelope. [Legacy v1 examples](../examples/legacy-v1/mandates.json) are retained solely for migration context and must not be interpreted as v2 authorizations.
 
 ### 4.4 Representation
 
@@ -132,7 +132,7 @@ Logical execution states are PROPOSED, ACCEPTED, EXECUTING, DELIVERED and CLOSED
 | `applyFeedback` | Retain or return only specifically permitted feedback |
 | `revokeMandate` | Prospectively invalidate scope according to profile semantics |
 
-These names are semantic interfaces, not deployed endpoints. A wire profile MUST define authenticated messages, identifiers, canonical encodings, signature verification, freshness, replay protection and errors before claiming interoperable implementation. [SDP404-0004](SDP404-0004-local-wire.md) supplies one bounded, executable local profile; its alpha implementation is not a universal network transport.
+These names are semantic interfaces, not deployed endpoints. A wire profile MUST define authenticated messages, identifiers, canonical encodings, signature verification, freshness, replay protection and errors before claiming interoperable implementation. [SDP-0004](SDP-0004-local-wire.md) supplies one bounded, executable local profile; its alpha implementation is not a universal network transport.
 
 ## 8. Recovery and concurrency
 

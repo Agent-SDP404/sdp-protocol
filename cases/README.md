@@ -1,6 +1,6 @@
 # Application cases
 
-AGENT-SDP404 applies to data from people, organizations, public resources, science, devices, environments and agents. Cases exercise that common architecture; none defines the whole protocol.
+agent-sdp applies to data from people, organizations, public resources, science, devices, environments and agents. Cases exercise that common architecture; none defines the whole protocol.
 
 | Case | Sources | Exchange outcome | Evidence |
 |---|---|---|---|
